@@ -201,6 +201,7 @@ blockquote {
 }
 
 .tm-hero-subtitle {
+  font-size: 1.5rem;
   text-shadow: 2px 2px 2px #333;
 }
 
@@ -697,3 +698,4 @@ p {
     margin: 0;
   }
 }
+
