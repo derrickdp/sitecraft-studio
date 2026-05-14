@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>South Western Kentucky Home Renovation Contractor</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1f3a52;
+      --primary-dark: #15293b;
+      --accent: #c97834;
+      --accent-hover: #a86127;
+      --light: #f7f4ef;
+      --white: #ffffff;
+      --text: #2b2b2b;
+      --muted: #6c6c6c;
+      --border: #e5e1da;
+      --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 14px;
+      --transition: all 0.3s ease;
+      --max-width: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--light);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--primary);
+      margin-bottom: 18px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .section-subtitle {
+      max-width: 720px;
+      color: var(--muted);
+      margin-bottom: 50px;
+      font-size: 1.05rem;
+    }
+
+    /* Header */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--primary);
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      padding: 12px 20px;
+      background: var(--accent);
+      color: var(--white);
+      border-radius: 999px;
+      transition: var(--transition);
+      font-weight: 700;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+
+    .hero {
+      background:
+        linear-gradient(rgba(17, 29, 41, 0.72), rgba(17, 29, 41, 0.72)),
+        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      color: var(--white);
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 999px;
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 5.2rem);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 640px;
+      margin-bottom: 36px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      border: 2px solid rgba(255,255,255,0.5);
+      color: var(--white);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: var(--white);
+      padding: 36px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .about-card h3 {
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-size: 1.5rem;
+    }
+
+    .about-list {
+      margin-top: 24px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .about-list li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(201, 120, 52, 0.15);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    /* Services */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 34px 28px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(201, 120, 52, 0.12);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 22px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .service-card h3 {
+      margin-bottom: 14px;
+      color: var(--primary);
+    }
+
+    .service-card p {
+      color: var(--muted);
+    }
+
+    /* Portfolio */
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .portfolio-item {
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-6px);
+    }
+
+    .portfolio-image {
+      height: 260px;
+      background: linear-gradient(135deg, #d7d0c6, #b8b0a5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(0,0,0,0.45);
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .portfolio-content {
+      padding: 24px;
+    }
+
+    .portfolio-content h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .portfolio-content p {
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    /* Testimonials */
+
+    .testimonials {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .testimonials .section-title,
+    .testimonials .section-subtitle {
+      color: var(--white);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: rgba(255,255,255,0.08);
+      padding: 34px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .stars {
+      color: #ffcf66;
+      margin-bottom: 18px;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-card p {
+      margin-bottom: 22px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .testimonial-author {
+      font-weight: 700;
+    }
+
+    /* Contact */
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-info,
+    .contact-form {
+      background: var(--white);
+      padding: 38px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.7rem;
+    }
+
+    .contact-detail {
+      margin-bottom: 24px;
+    }
+
+    .contact-detail span {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    .contact-detail strong {
+      color: var(--primary);
+      font-size: 1.1rem;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-family: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+      background: #fcfcfb;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 4px rgba(201, 120, 52, 0.12);
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    /* Footer */
+
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.8);
+      padding: 36px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin-bottom: 6px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 992px) {
+      .about-grid,
+      .services-grid,
+      .portfolio-grid,
+      .testimonials-grid,
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        gap: 18px;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <!-- REPLACE: Business Name -->
+        Bluegrass <span>Renovations</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Our Work</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a class="nav-cta" href="#contact">Get a Free Estimate</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-tag">
+          Proudly Serving Monticello & South Western Kentucky
+        </div>
+
+        <h1>
+          South Western Kentucky's Trusted Home Renovation Contractor
+        </h1>
+
+        <p>
+          <!-- REPLACE: Hero Description -->
+          From kitchen remodels and bathroom renovations to roofing, additions,
+          and custom decks — we help Kentucky homeowners improve and protect
+          what matters most.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">
+            Request a Free Estimate
+          </a>
+
+          <a href="#services" class="btn btn-secondary">
+            View Our Services
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+
+      <h2 class="section-title">
+        Built on Hard Work, Honesty & Local Pride
+      </h2>
+
+      <p class="section-subtitle">
+        <!-- REPLACE: About Intro -->
+        We’re a locally owned contractor proudly serving homeowners across
+        Monticello and South Western Kentucky with dependable renovation and
+        construction services tailored to rural homes and families.
+      </p>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+          <h3>
+            Why Homeowners Choose Us
+          </h3>
+
+          <p>
+            <!-- REPLACE: About Main Content -->
+            We believe good work speaks for itself. Our team focuses on clear
+            communication, dependable scheduling, quality craftsmanship, and
+            treating every home like it belongs to family.
+          </p>
+
+          <ul class="about-list">
+            <li>
+              <div class="check">✓</div>
+              Licensed & experienced local contractor
+            </li>
+
+            <li>
+              <div class="check">✓</div>
+              Honest estimates with no pressure
+            </li>
+
+            <li>
+              <div class="check">✓</div>
+              Residential renovation specialists
+            </li>
+
+            <li>
+              <div class="check">✓</div>
+              Proudly serving South Western Kentucky
+            </li>
+          </ul>
+        </div>
+
+        <div class="about-card">
+          <h3>
+            Serving Homes Across the Region
+          </h3>
+
+          <p>
+            <!-- REPLACE: Service Area Description -->
+            Whether you're updating an older farmhouse, remodeling your kitchen,
+            building a new deck, or repairing storm damage, we bring dependable
+            craftsmanship and local experience to every project.
+          </p>
+
+          <br>
+
+          <p>
+            <!-- REPLACE: Counties / Cities Served -->
+            Serving Monticello, Somerset, Albany, Russell Springs, Jamestown,
+            and surrounding communities throughout South Western Kentucky.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+
+      <h2 class="section-title">
+        Renovation & Contracting Services
+      </h2>
+
+      <p class="section-subtitle">
+        <!-- REPLACE: Services Intro -->
+        From small updates to full home transformations, we provide dependable
+        renovation services designed to improve comfort, value, and durability.
+      </p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">01</div>
+          <h3>Kitchen Remodeling</h3>
+          <p>
+            Modern layouts, cabinetry, flooring, lighting, countertops, and
+            functional upgrades built around your family’s needs.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">02</div>
+          <h3>Bathroom Renovations</h3>
+          <p>
+            Full bathroom updates including tile work, showers, vanities,
+            fixtures, and improved accessibility.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">03</div>
+          <h3>Home Additions</h3>
+          <p>
+            Expand your living space with custom room additions, garages,
+            sunrooms, and family spaces.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">04</div>
+          <h3>Roofing & Repairs</h3>
+          <p>
+            Protect your home with dependable roofing repairs, replacements,
+            and storm damage restoration.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">05</div>
+          <h3>Decks & Outdoor Spaces</h3>
+          <p>
+            Custom decks, covered porches, railings, and outdoor living spaces
+            built for Kentucky living.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">06</div>
+          <h3>General Contracting</h3>
+          <p>
+            Reliable construction management and renovation services from start
+            to finish with clear communication.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="work">
+    <div class="container">
+
+      <h2 class="section-title">
+        Recent Projects
+      </h2>
+
+      <p class="section-subtitle">
+        <!-- REPLACE: Portfolio Intro -->
+        Swap these placeholders with real project photos to showcase your work
+        and build trust with future customers.
+      </p>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <!-- REPLACE: Portfolio Image -->
+            Kitchen Remodel Photo Placeholder
+          </div>
+
+          <div class="portfolio-content">
+            <h3>
+              <!-- REPLACE: Project Title -->
+              Modern Kitchen Renovation
+            </h3>
+
+            <p>
+              <!-- REPLACE: Project Description -->
+              Full kitchen transformation with custom cabinets, tile backsplash,
+              updated flooring, and open-concept layout improvements.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <!-- REPLACE: Portfolio Image -->
+            Bathroom Remodel Photo Placeholder
+          </div>
+
+          <div class="portfolio-content">
+            <h3>
+              <!-- REPLACE: Project Title -->
+              Bathroom Upgrade
+            </h3>
+
+            <p>
+              <!-- REPLACE: Project Description -->
+              Walk-in shower installation, modern fixtures, vanity replacement,
+              and improved lighting for a clean modern finish.
+            </p>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image">
+            <!-- REPLACE: Portfolio Image -->
+            Deck Construction Photo Placeholder
+          </div>
+
+          <div class="portfolio-content">
+            <h3>
+              <!-- REPLACE: Project Title -->
+              Custom Back Deck
+            </h3>
+
+            <p>
+              <!-- REPLACE: Project Description -->
+              Spacious custom-built deck designed for outdoor gatherings and
+              long-lasting durability.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+
+      <h2 class="section-title">
+        What Local Homeowners Say
+      </h2>
+
+      <p class="section-subtitle">
+        <!-- REPLACE: Testimonials Intro -->
+        Placeholder testimonials below can be replaced with real customer
+        reviews from Google or Facebook.
+      </p>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            <!-- REPLACE: Testimonial -->
+            “They remodeled our kitchen and did an outstanding job from start
+            to finish. Honest, dependable, and easy to work with.”
+          </p>
+
+          <div class="testimonial-author">
+            — Sarah T., Monticello KY
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            <!-- REPLACE: Testimonial -->
+            “The crew showed up on time, communicated clearly, and treated our
+            home with respect. We’ll definitely use them again.”
+          </p>
+
+          <div class="testimonial-author">
+            — James R., Somerset KY
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+
+          <p>
+            <!-- REPLACE: Testimonial -->
+            “Our new deck turned out better than we imagined. Quality work and
+            fair pricing. Highly recommended.”
+          </p>
+
+          <div class="testimonial-author">
+            — Melissa H., Russell County KY
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+
+      <h2 class="section-title">
+        Request a Free Estimate
+      </h2>
+
+      <p class="section-subtitle">
+        <!-- REPLACE: Contact Intro -->
+        Ready to start your renovation project? Reach out today for a free
+        consultation and estimate.
+      </p>
+
+      <div class="contact-wrapper">
+
+        <div class="contact-info">
+
+          <h3>Contact Information</h3>
+
+          <div class="contact-detail">
+            <span>Business Name</span>
+
+            <strong>
+              <!-- REPLACE: Business Name -->
+              Bluegrass Renovations
+            </strong>
+          </div>
+
+          <div class="contact-detail">
+            <span>Phone</span>
+
+            <strong>
+              <!-- REPLACE: Phone Number -->
+              (555) 555-5555
+            </strong>
+          </div>
+
+          <div class="contact-detail">
+            <span>Email</span>
+
+            <strong>
+              <!-- REPLACE: Email -->
+              info@yourbusiness.com
+            </strong>
+          </div>
+
+          <div class="contact-detail">
+            <span>Service Area</span>
+
+            <strong>
+              Monticello & South Western Kentucky
+            </strong>
+          </div>
+
+        </div>
+
+        <div class="contact-form">
+
+          <h3>Send Us a Message</h3>
+
+          <form>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+            >
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            >
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your Phone Number"
+            >
+
+            <textarea
+              name="message"
+              placeholder="Tell us about your project..."
+              required
+            ></textarea>
+
+            <button type="submit" class="btn btn-primary">
+              Submit Request
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+
+      <p>
+        <!-- REPLACE: Business Name -->
+        Bluegrass Renovations
+      </p>
+
+      <p>
+        Monticello, Kentucky • Serving South Western Kentucky
+      </p>
+
+      <p>
+        &copy; 2026 All Rights Reserved.
+      </p>
+
+    </div>
+  </footer>
+
+  <script>
+    // Simple enhancement for active navigation scroll feel
+    const links = document.querySelectorAll('nav a');
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        document.body.style.scrollBehavior = 'smooth';
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- REPLACE: Update the title tag with your actual business name -->
+  <title>Appalachian Home Renovations | Monticello, KY General Contractor</title>
+  <meta name="description" content="South Western Kentucky's trusted general contractor. Home renovations, additions, kitchens, bathrooms, roofing, and decks. Serving Monticello, KY and surrounding counties." />
+
+  <!-- Google Fonts: Playfair Display (display) + Source Sans 3 (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — Edit colors/fonts here globally
+       ============================================================ */
+    :root {
+      --navy:        #1a2a3a;   /* Deep navy — trust, strength */
+      --navy-dark:   #111e2b;
+      --rust:        #c0521f;   /* Warm rust — craftsmanship accent */
+      --rust-light:  #d96b33;
+      --sand:        #f2ede4;   /* Warm sand — regional warmth */
+      --stone:       #e8e0d4;
+      --oak:         #8b6c4f;   /* Earthy oak brown */
+      --white:       #ffffff;
+      --off-white:   #faf8f5;
+      --text-dark:   #1a1a1a;
+      --text-mid:    #4a4a4a;
+      --text-light:  #7a7a7a;
+      --radius:      6px;
+      --shadow:      0 4px 24px rgba(26,42,58,0.12);
+      --shadow-lg:   0 8px 48px rgba(26,42,58,0.18);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+      --max-w:        1180px;
+      --section-pad:  90px 24px;
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--text-dark);
+      background: var(--off-white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================================
+       TYPOGRAPHY HELPERS
+       ============================================================ */
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.18;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 620px;
+      line-height: 1.75;
+    }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn {
+      display: inline-block;
+      padding: 15px 36px;
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.22s ease;
+      text-align: center;
+    }
+    .btn-primary {
+      background: var(--rust);
+      color: var(--white);
+      border-color: var(--rust);
+    }
+    .btn-primary:hover {
+      background: var(--rust-light);
+      border-color: var(--rust-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(192,82,31,0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,0.7);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .btn-navy:hover {
+      background: var(--navy-dark);
+      border-color: var(--navy-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      padding: 0 24px;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .nav.scrolled {
+      background: var(--navy-dark);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    .nav-logo span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-top: 1px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      padding: 10px 24px !important;
+      font-size: 0.85rem !important;
+    }
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      background: var(--navy-dark);
+      padding: 20px 24px 28px;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--white); }
+
+    /* ============================================================
+       HERO SECTION
+       ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      /* Texture overlay on a dark navy background */
+      background: var(--navy-dark);
+    }
+    /* Diagonal warm accent band */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(192,82,31,0.18) 0%,
+          transparent 55%
+        ),
+        /* wood-plank texture simulation via repeating gradient */
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,0.015) 0px,
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 80px
+        );
+      pointer-events: none;
+    }
+    /* Bottom fade to next section color */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 140px;
+      background: linear-gradient(to bottom, transparent, var(--sand));
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .hero-text { }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(192,82,31,0.2);
+      border: 1px solid rgba(192,82,31,0.4);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+    }
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--rust);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.6; transform: scale(0.85); }
+    }
+    .hero-badge span {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+    }
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    .hero-headline em {
+      font-style: normal;
+      color: var(--rust);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.72);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero-phone-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.75);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .hero-phone-link:hover { color: var(--white); }
+    .hero-phone-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+    /* Stats card panel on the right */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 28px 24px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: background 0.25s, border-color 0.25s;
+    }
+    .stat-card:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(192,82,31,0.5);
+    }
+    .stat-card:first-child {
+      grid-column: 1 / -1;
+      background: rgba(192,82,31,0.15);
+      border-color: rgba(192,82,31,0.4);
+    }
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .stat-card:first-child .stat-number { color: var(--rust-light); }
+    .stat-unit {
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.5);
+    }
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-top: 6px;
+    }
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 155px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .scroll-arrow {
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      animation: bounce 2s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(5px); }
+    }
+
+    /* ============================================================
+       TRUST BAR
+       ============================================================ */
+    .trust-bar {
+      background: var(--sand);
+      border-bottom: 1px solid var(--stone);
+      padding: 20px 24px;
+    }
+    .trust-bar-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .trust-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+    .trust-divider {
+      width: 1px;
+      height: 28px;
+      background: var(--stone);
+    }
+
+    /* ============================================================
+       ABOUT SECTION
+       ============================================================ */
+    .about {
+      background: var(--sand);
+      padding: var(--section-pad);
+    }
+    .about-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .about-image-stack {
+      position: relative;
+      padding-bottom: 48px;
+      padding-right: 48px;
+    }
+    .about-img-main {
+      /* REPLACE: Swap background-color with actual photo using: background-image: url('your-photo.jpg'); */
+      background-color: #c9b99a;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 1px,
+          transparent 1px, transparent 20px
+        );
+      border-radius: 8px;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .about-img-main::after {
+      content: '📷 Add your photo here';
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(0,0,0,0.35);
+      letter-spacing: 0.05em;
+    }
+    .about-img-accent {
+      /* REPLACE: Second accent photo */
+      background-color: var(--navy);
+      background-image:
+        repeating-linear-gradient(
+          -45deg,
+          rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px,
+          transparent 1px, transparent 18px
+        );
+      border-radius: 8px;
+      width: 180px;
+      height: 160px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--sand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.04em;
+    }
+    .years-badge {
+      position: absolute;
+      top: -18px;
+      left: -18px;
+      width: 90px;
+      height: 90px;
+      background: var(--rust);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(192,82,31,0.4);
+      z-index: 2;
+    }
+    .years-badge .num {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+    .years-badge .lbl {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+    }
+    .about-text { }
+    .about-text .section-subtitle { margin-bottom: 20px; }
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .about-highlight {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      border-left: 3px solid var(--rust);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .about-highlight h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .about-highlight p {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       SERVICES SECTION
+       ============================================================ */
+    .services {
+      background: var(--white);
+      padding: var(--section-pad);
+    }
+    .services-header {
+      max-width: var(--max-w);
+      margin: 0 auto 56px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .services-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--off-white);
+      border: 1px solid var(--stone);
+      border-radius: 10px;
+      padding: 36px 30px;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--rust);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      display: block;
+      line-height: 1;
+    }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* ============================================================
+       PORTFOLIO / OUR WORK SECTION
+       ============================================================ */
+    .portfolio {
+      background: var(--sand);
+      padding: var(--section-pad);
+    }
+    .portfolio-header {
+      max-width: var(--max-w);
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+    .portfolio-header .section-subtitle {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .portfolio-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+    }
+    .portfolio-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+    }
+    .portfolio-item:nth-child(1) { grid-column: 1 / 8; grid-row: 1; }
+    .portfolio-item:nth-child(2) { grid-column: 8 / 13; grid-row: 1; }
+    .portfolio-item:nth-child(3) { grid-column: 1 / 5; grid-row: 2; }
+    .portfolio-item:nth-child(4) { grid-column: 5 / 9; grid-row: 2; }
+    .portfolio-item:nth-child(5) { grid-column: 9 / 13; grid-row: 2; }
+
+    /* Placeholder image blocks */
+    .portfolio-placeholder {
+      /* REPLACE: background-image: url('path/to/photo.jpg'); background-size: cover; background-position: center; */
+      background-color: #c4b9a8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform 0.35s ease;
+    }
+    .portfolio-item:nth-child(1) .portfolio-placeholder { height: 320px; }
+    .portfolio-item:nth-child(2) .portfolio-placeholder { height: 320px; background-color: #b5a896; }
+    .portfolio-item:nth-child(3) .portfolio-placeholder { height: 240px; background-color: #cbbdac; }
+    .portfolio-item:nth-child(4) .portfolio-placeholder { height: 240px; background-color: #a89585; }
+    .portfolio-item:nth-child(5) .portfolio-placeholder { height: 240px; background-color: #c0ae9e; }
+
+    .portfolio-item:hover .portfolio-placeholder { transform: scale(1.04); }
+    .ph-icon { font-size: 1.8rem; opacity: 0.45; }
+    .ph-text {
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.35);
+    }
+    .portfolio-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(26,42,58,0.88));
+      padding: 40px 22px 18px;
+      color: var(--white);
+    }
+    .portfolio-caption h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+    .portfolio-caption span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.04em;
+    }
+
+    /* ============================================================
+       TESTIMONIALS SECTION
+       ============================================================ */
+    .testimonials {
+      background: var(--navy);
+      padding: var(--section-pad);
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 40px;
+      font-family: var(--font-display);
+      font-size: 18rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+    }
+    .testimonials-header {
+      max-width: var(--max-w);
+      margin: 0 auto 56px;
+      text-align: center;
+    }
+    .testimonials-header .section-title { color: var(--white); }
+    .testimonials-header .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto; text-align: center; }
+    .testimonials-grid {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 36px 32px;
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+    }
+    .testimonial-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(192,82,31,0.45);
+      transform: translateY(-4px);
+    }
+    .stars {
+      color: #f5c242;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .testimonial-card blockquote {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .author-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--rust);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .author-info .name {
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--white);
+    }
+    .author-info .location {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.03em;
+    }
+
+    /* ============================================================
+       CONTACT SECTION
+       ============================================================ */
+    .contact {
+      background: var(--off-white);
+      padding: var(--section-pad);
+    }
+    .contact-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info { }
+    .contact-info .section-subtitle { margin-bottom: 40px; }
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .contact-detail-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-detail-text h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .contact-detail-text a,
+    .contact-detail-text p {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      transition: color 0.2s;
+    }
+    .contact-detail-text a:hover { color: var(--rust); }
+    .service-area-box {
+      background: var(--sand);
+      border: 1px solid var(--stone);
+      border-radius: 10px;
+      padding: 24px 28px;
+    }
+    .service-area-box h4 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .area-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .area-tag {
+      background: var(--white);
+      border: 1px solid var(--stone);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    /* Contact Form */
+    .contact-form-wrap {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 44px 40px;
+      box-shadow: var(--shadow-lg);
+    }
+    .contact-form-wrap h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 28px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    .form-group label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--stone);
+      border-radius: var(--radius);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      background: var(--off-white);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #b0a898; }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 3px rgba(26,42,58,0.08);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit {
+      margin-top: 8px;
+      width: 100%;
+      padding: 16px;
+      font-size: 1rem;
+    }
+    .form-note {
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      text-align: center;
+    }
+    .form-success {
+      display: none;
+      background: #edf7ed;
+      border: 1px solid #b2dfb2;
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-size: 0.92rem;
+      color: #2e6e2e;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    .footer {
+      background: var(--navy-dark);
+      padding: 48px 24px 32px;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      max-width: 300px;
+    }
+    .footer-col h4 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 16px;
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col ul li a {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+      max-width: var(--max-w);
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.35);
+    }
+    .footer-bottom a {
+      color: rgba(255,255,255,0.45);
+      transition: color 0.2s;
+    }
+    .footer-bottom a:hover { color: var(--white); }
+
+    /* ============================================================
+       FLOATING CALL BUTTON (mobile)
+       ============================================================ */
+    .float-call {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 998;
+      background: var(--rust);
+      color: var(--white);
+      border-radius: 100px;
+      padding: 14px 24px 14px 18px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      box-shadow: 0 6px 24px rgba(192,82,31,0.45);
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+    .float-call:hover {
+      background: var(--rust-light);
+      transform: scale(1.04);
+    }
+    .float-call span { font-size: 1.1rem; }
+
+    /* ============================================================
+       RESPONSIVE — TABLET / MOBILE
+       ============================================================ */
+    @media (max-width: 900px) {
+      :root { --section-pad: 64px 24px; }
+
+      /* Nav */
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      /* Hero */
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 110px;
+        padding-bottom: 60px;
+      }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .hero-stats .stat-card:first-child { grid-column: auto; }
+      .scroll-hint { display: none; }
+
+      /* Trust bar */
+      .trust-divider { display: none; }
+
+      /* About */
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-image-stack { padding-right: 32px; }
+
+      /* Services */
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+      /* Portfolio */
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .portfolio-item { grid-column: auto !important; grid-row: auto !important; }
+      .portfolio-item .portfolio-placeholder { height: 200px !important; }
+
+      /* Testimonials */
+      .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
+
+      /* Contact */
+      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+
+      /* Footer */
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+
+      /* Float button */
+      .float-call { display: flex; }
+    }
+
+    @media (max-width: 560px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: auto; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .about-highlights { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .services-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <!-- REPLACE: Update business name in logo -->
+      <a href="#" class="nav-logo">
+        Appalachian Home Renovations
+        <span>Monticello, Kentucky</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Our Work</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <!-- REPLACE: Update phone number -->
+        <li><a href="#contact" class="btn btn-primary btn-primary nav-cta">Free Estimate</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#portfolio" class="mobile-link">Our Work</a>
+      <a href="#testimonials" class="mobile-link">Reviews</a>
+      <a href="#contact" class="mobile-link">Free Estimate</a>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <!-- REPLACE: Update service area tagline -->
+          <span>Now Serving Wayne, McCreary &amp; Pulaski Counties</span>
+        </div>
+
+        <!-- REPLACE: Customize headline to match your brand voice -->
+        <h1 class="hero-headline">
+          South Western Kentucky's<br />
+          <em>Trusted</em> Home<br />
+          Renovation Contractor
+        </h1>
+
+        <!-- REPLACE: Update the subheadline copy -->
+        <p class="hero-sub">
+          From kitchen remodels to full home additions — we bring local craftsmanship, honest pricing, and over a decade of experience right to your door in Monticello and beyond.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get a Free Estimate</a>
+          <!-- REPLACE: Update phone number -->
+          <a href="tel:+16065550100" class="hero-phone-link">
+            <div class="hero-phone-icon">📞</div>
+            <!-- REPLACE: (606) 555-0100 → your actual phone number -->
+            (606) 555-0100
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <!-- REPLACE: Update stats with actual business numbers -->
+        <div class="stat-card">
+          <div class="stat-number">500<span class="stat-unit">+</span></div>
+          <div class="stat-label">Projects Completed in South Western KY</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">15<span class="stat-unit">+</span></div>
+          <div class="stat-label">Years in Business</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100<span class="stat-unit">%</span></div>
+          <div class="stat-label">Licensed &amp; Insured</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">5<span class="stat-unit">★</span></div>
+          <div class="stat-label">Customer Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      Scroll
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRUST BAR
+       ============================================================ -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <div class="trust-icon">✓</div>
+        <!-- REPLACE: Update license number -->
+        KY Licensed Contractor #XXXXXX
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">🛡</div>
+        Fully Insured &amp; Bonded
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">📍</div>
+        Locally Owned, Monticello KY
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">⚡</div>
+        Free Estimates, No Obligation
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-image-stack">
+        <!-- REPLACE: Replace the placeholder div below with an actual <img> tag:
+             <img src="images/owner-or-crew.jpg" alt="[Owner Name] — Appalachian Home Renovations" style="width:100%;height:380px;object-fit:cover;border-radius:8px;" />
+        -->
+        <div class="about-img-main">
+          <div class="years-badge">
+            <!-- REPLACE: Update years in business -->
+            <div class="num">15</div>
+            <div class="lbl">Years</div>
+          </div>
+        </div>
+        <!-- REPLACE: Second photo placeholder — swap with <img> tag of a completed project -->
+        <div class="about-img-accent">Photo 2</div>
+      </div>
+
+      <div class="about-text">
+        <div class="section-label">About Us</div>
+        <!-- REPLACE: Update business name in heading -->
+        <h2 class="section-title">Built on Kentucky Roots &amp; Honest Work</h2>
+        <!-- REPLACE: Personalize with your own story — who you are, how long you've been in the area, values, etc. -->
+        <p class="section-subtitle">
+          We're a family-owned general contracting business right here in Monticello, KY. We've been building and renovating homes across Wayne, McCreary, and Pulaski counties for over 15 years — and we treat every project like it's our own home.
+        </p>
+        <p class="section-subtitle" style="margin-top:14px;">
+          When you hire us, you're not getting a franchise or a crew from out of state. You're getting neighbors who know this land, understand what Kentucky homes need, and stand behind every nail we drive.
+        </p>
+
+        <div class="about-highlights">
+          <!-- REPLACE: Customize these with actual credentials or highlights -->
+          <div class="about-highlight">
+            <h4>Licensed &amp; Insured</h4>
+            <p>KY State contractor license &amp; full liability coverage on every job.</p>
+          </div>
+          <div class="about-highlight">
+            <h4>Local Materials</h4>
+            <p>We source quality materials from regional suppliers whenever possible.</p>
+          </div>
+          <div class="about-highlight">
+            <h4>No Sub-Surprises</h4>
+            <p>Our own trained crew does the work — no surprise subcontractors.</p>
+          </div>
+          <div class="about-highlight">
+            <h4>Written Estimates</h4>
+            <p>Clear, itemized quotes in writing before a single board is cut.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES SECTION
+       ============================================================ -->
+  <section class="services" id="services">
+    <div class="services-header">
+      <div>
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Full-Scope Renovation &amp;<br />Contracting Services</h2>
+      </div>
+      <p class="section-subtitle" style="max-width:380px;">
+        From small repairs to ground-up additions — if it's your home, we can build it, fix it, or make it better.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- REPLACE: Add, remove, or rename services to match what your business actually offers -->
+      <div class="service-card">
+        <span class="service-icon">🏠</span>
+        <h3>Full Home Remodeling</h3>
+        <p>Interior renovations, layout changes, and full-home makeovers that match your vision and your budget.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🍳</span>
+        <h3>Kitchen Renovations</h3>
+        <p>Custom cabinets, new countertops, flooring, fixtures, and appliance installation — the whole kitchen, done right.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛁</span>
+        <h3>Bathroom Remodels</h3>
+        <p>Tile work, vanities, walk-in showers, tub surround, plumbing updates — master baths to half-baths and everything between.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏗️</span>
+        <h3>Room Additions</h3>
+        <p>Need more space? We design and build seamless room additions that match your existing home's look and feel.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🪵</span>
+        <h3>Decks &amp; Porches</h3>
+        <p>Pressure-treated lumber, composite decking, covered porches, and wraparound verandas built to last Kentucky weather.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🏚️</span>
+        <h3>Roofing &amp; Exterior</h3>
+        <p>Roof replacement, siding, gutters, exterior painting, and weatherproofing to protect your home year-round.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🚪</span>
+        <h3>Doors &amp; Windows</h3>
+        <p>Energy-efficient replacements for doors and windows, including installation and trim work.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔧</span>
+        <h3>Repairs &amp; Restoration</h3>
+        <p>Foundation concerns, water damage, structural repairs, rot replacement — no job too small for a good Kentucky home.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛖</span>
+        <h3>Garages &amp; Outbuildings</h3>
+        <p>Detached garages, workshops, barns, and storage buildings designed for rural Kentucky properties.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO / OUR WORK SECTION
+       ============================================================ -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio-header">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Craftsmanship You Can See</h2>
+      <p class="section-subtitle">
+        Every project we complete stays in the community. Here's a sample of what we've built across South Western Kentucky.
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- REPLACE each portfolio-placeholder div with a real photo:
+           Remove the placeholder div entirely and replace with:
+           <img src="images/project1.jpg" alt="[Project description]" style="width:100%;height:320px;object-fit:cover;" />
+      -->
+      <div class="portfolio-item">
+        <div class="portfolio-placeholder">
+          <div class="ph-icon">🏠</div>
+          <!-- REPLACE: photo of your best project -->
+          <div class="ph-text">Add Project Photo</div>
+        </div>
+        <div class="portfolio-caption">
+          <!-- REPLACE: Update project name and location -->
+          <h4>Full Kitchen &amp; Living Room Remodel</h4>
+          <span>Monticello, KY — 2024</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-placeholder">
+          <div class="ph-icon">🛁</div>
+          <div class="ph-text">Add Project Photo</div>
+        </div>
+        <div class="portfolio-caption">
+          <!-- REPLACE: -->
+          <h4>Master Bathroom Addition</h4>
+          <span>Burnside, KY — 2024</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-placeholder">
+          <div class="ph-icon">🪵</div>
+          <div class="ph-text">Add Project Photo</div>
+        </div>
+        <div class="portfolio-caption">
+          <!-- REPLACE: -->
+          <h4>Wraparound Covered Porch</h4>
+          <span>Pine Knot, KY — 2023</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-placeholder">
+          <div class="ph-icon">🏗️</div>
+          <div class="ph-text">Add Project Photo</div>
+        </div>
+        <div class="portfolio-caption">
+          <!-- REPLACE: -->
+          <h4>Two-Car Garage Addition</h4>
+          <span>Whitley City, KY — 2023</span>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-placeholder">
+          <div class="ph-icon">🏚️</div>
+          <div class="ph-text">Add Project Photo</div>
+        </div>
+        <div class="portfolio-caption">
+          <!-- REPLACE: -->
+          <h4>Full Exterior &amp; Roof Replacement</h4>
+          <span>Somerset, KY — 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS SECTION
+       ============================================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-header">
+      <div class="section-label" style="color:rgba(255,255,255,0.5);">What Neighbors Say</div>
+      <h2 class="section-title">Real Reviews from Real Kentuckians</h2>
+      <p class="section-subtitle">We don't just build homes — we build relationships that last well after the final nail is driven.</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- REPLACE: Replace all 3 testimonials with real customer quotes (with permission) -->
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "We had them do our entire kitchen and a new back deck. The crew was respectful, they cleaned up every day before leaving, and the finished product looks better than anything we could've imagined. Honest pricing and no hidden fees — I'll be calling them again."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">RH</div>
+          <div class="author-info">
+            <!-- REPLACE: Real customer name and town -->
+            <div class="name">Robert H.</div>
+            <div class="location">Monticello, KY</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "After a bad storm took off part of our roof, they had us patched and fully replaced within a week. Great communication the whole time. As a widow living alone out here, I really needed someone I could trust — and they were exactly that."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">DM</div>
+          <div class="author-info">
+            <!-- REPLACE: -->
+            <div class="name">Donna M.</div>
+            <div class="location">Pine Knot, KY</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "We added a 400 sq ft master suite to our house and couldn't be happier. They matched the siding, the trim, everything — you'd never know it wasn't part of the original build. These guys are the real deal and I tell everyone in Wayne County to use them."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar">TW</div>
+          <div class="author-info">
+            <!-- REPLACE: -->
+            <div class="name">Tom &amp; Linda W.</div>
+            <div class="location">Burnside, KY</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <!-- Left: Contact info + service area -->
+      <div class="contact-info">
+        <div class="section-label">Contact Us</div>
+        <h2 class="section-title">Ready to Start Your Project?</h2>
+        <p class="section-subtitle">
+          Fill out the form or give us a call — we'll get back to you within one business day with a free, no-obligation estimate.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <h4>Phone</h4>
+              <!-- REPLACE: Update phone number -->
+              <a href="tel:+16065550100">(606) 555-0100</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div class="contact-detail-text">
+              <h4>Email</h4>
+              <!-- REPLACE: Update email address -->
+              <a href="mailto:info@appalachianhomes.com">info@appalachianhomes.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <h4>Based In</h4>
+              <!-- REPLACE: Update business address -->
+              <p>Monticello, KY 42633</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕐</div>
+            <div class="contact-detail-text">
+              <h4>Hours</h4>
+              <!-- REPLACE: Update business hours -->
+              <p>Mon–Fri: 7am–6pm &nbsp;|&nbsp; Sat: 8am–2pm</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-area-box">
+          <h4>📍 Service Area</h4>
+          <!-- REPLACE: Update counties/towns to match your actual coverage area -->
+          <div class="area-tags">
+            <span class="area-tag">Monticello</span>
+            <span class="area-tag">Wayne County</span>
+            <span class="area-tag">McCreary County</span>
+            <span class="area-tag">Pulaski County</span>
+            <span class="area-tag">Somerset</span>
+            <span class="area-tag">Burnside</span>
+            <span class="area-tag">Pine Knot</span>
+            <span class="area-tag">Whitley City</span>
+            <span class="area-tag">Williamsburg</span>
+            <span class="area-tag">+ Surrounding Areas</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact form -->
+      <div class="contact-form-wrap">
+        <h3>Get Your Free Estimate</h3>
+        <!-- NOTE: This is a static HTML form. To make it functional, connect it to a service like
+             Formspree (formspree.io), EmailJS, or your own backend server.
+             REPLACE action="#" with your form handler URL. -->
+        <form id="contactForm" action="#" method="POST" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="first_name" placeholder="John" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="last_name" placeholder="Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(606) 555-0000" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" />
+            </div>
+            <div class="form-group full">
+              <label for="service">Type of Project</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service…</option>
+                <option>Full Home Remodel</option>
+                <option>Kitchen Renovation</option>
+                <option>Bathroom Remodel</option>
+                <option>Room Addition</option>
+                <option>Deck / Porch</option>
+                <option>Roofing &amp; Exterior</option>
+                <option>Doors &amp; Windows</option>
+                <option>Repair &amp; Restoration</option>
+                <option>Garage / Outbuilding</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="message">Tell Us About Your Project</label>
+              <textarea id="message" name="message" placeholder="Describe what you're hoping to do — the more detail, the better we can help…"></textarea>
+            </div>
+            <div class="form-group full">
+              <button type="submit" class="btn btn-primary form-submit">Send My Free Estimate Request →</button>
+            </div>
+          </div>
+          <p class="form-note">We typically respond within 1 business day. No spam, ever.</p>
+          <div class="form-success" id="formSuccess">
+            ✓ Thanks! We received your message and will be in touch soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <!-- REPLACE: Business name and tagline -->
+        <h2>Appalachian Home Renovations</h2>
+        <p>South Western Kentucky's trusted general contractor. Serving Monticello, Wayne County, and surrounding communities since 2009.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Home Remodeling</a></li>
+          <li><a href="#services">Kitchen Renovations</a></li>
+          <li><a href="#services">Bathroom Remodels</a></li>
+          <li><a href="#services">Room Additions</a></li>
+          <li><a href="#services">Decks &amp; Porches</a></li>
+          <li><a href="#services">Roofing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <!-- REPLACE: Update all contact links -->
+          <li><a href="tel:+16065550100">(606) 555-0100</a></li>
+          <li><a href="mailto:info@appalachianhomes.com">info@appalachianhomes.com</a></li>
+          <li><a href="#contact">Free Estimate</a></li>
+          <!-- REPLACE: Add Google Maps or Facebook link if applicable -->
+          <li><a href="#">Facebook Page</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <!-- REPLACE: Update business name and year -->
+      <p>&copy; 2025 Appalachian Home Renovations · Monticello, KY 42633 · All Rights Reserved</p>
+      <p>
+        <!-- REPLACE: Update license number -->
+        KY Contractor License #XXXXXX &nbsp;·&nbsp; Fully Insured
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       FLOATING CALL BUTTON (mobile only)
+       ============================================================ -->
+  <!-- REPLACE: Update phone number in href -->
+  <a href="tel:+16065550100" class="float-call" aria-label="Call us now">
+    <span>📞</span> Call Now
+  </a>
+
+  <!-- ============================================================
+       JAVASCRIPT — Nav scroll, mobile menu, form demo handler
+       ============================================================ -->
+  <script>
+    // --- Sticky nav background on scroll ---
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // --- Mobile nav toggle ---
+    const toggleBtn  = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      });
+    });
+
+    // --- Contact form demo handler ---
+    // NOTE: Replace this with a real backend call (Formspree, EmailJS, etc.)
+    // This only shows a success message locally for demonstration.
+    const form        = document.getElementById('contactForm');
+    const successMsg  = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Remove this line when wiring to a real backend
+
+      // Basic validation
+      const firstName = document.getElementById('firstName').value.trim();
+      const phone     = document.getElementById('phone').value.trim();
+
+      if (!firstName || !phone) {
+        alert('Please fill in at least your name and phone number.');
+        return;
+      }
+
+      // Simulate success (replace with fetch/axios call to your form handler)
+      successMsg.style.display = 'block';
+      form.querySelectorAll('input, textarea, select, button').forEach(el => {
+        el.disabled = true;
+      });
+
+      // Scroll to success message
+      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    // --- Animate stat numbers on scroll into view ---
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.stat-card, .service-card, .testimonial-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
