@@ -189,6 +189,8 @@ blockquote {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .tm-hero-text-container-inner {
@@ -222,6 +224,9 @@ blockquote {
   display: inline-block;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 20;
+  pointer-events: all;
 }
 
 .tm-hero-cta-btn:hover,
@@ -237,7 +242,7 @@ blockquote {
   bottom: 100px;
   left: 0;
   right: 0;
-  z-index: 100;	
+  z-index: 5;	
 }
 
 @media (max-height: 480px) {
