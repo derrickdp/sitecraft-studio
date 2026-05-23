@@ -207,7 +207,6 @@ blockquote {
 
 .tm-hero-cta {
   position: relative;
-  z-index: 10;
   left: 0;
   right: 0;
   z-index: 200;
