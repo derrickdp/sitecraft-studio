@@ -258,7 +258,6 @@ blockquote {
 .tm-down-arrow-link {
   display: block;
   margin-top: 18%;
-  pointer-events: none;
 }
 
 .tm-down-arrow {
