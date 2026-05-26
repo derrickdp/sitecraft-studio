@@ -492,8 +492,13 @@ technology without paying enterprise prices.</p>
         // Add smooth scrolling to all links
         // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
         $("a").on('click', function(event) {
-          if (this.hash == "#blog-hero") {
-          } else if (this.hash !== "") {
+          var url = $(this).attr('href');
+
+          if ( url.includes("/blog")) {
+            return true;
+          }
+            
+          if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
 
