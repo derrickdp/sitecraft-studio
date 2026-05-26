@@ -7,7 +7,7 @@
 
 #blog-hero {
   background-color: #222;
-  background-image: url(../img/infinite-loop-01.jpg);
+  background-image: url(https://sitecraft-studio.com/img/infinite-loop-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -210px;
@@ -260,6 +260,74 @@
 
 .sidebar-recent-list a:hover {
   color: #D40;
+}
+
+/* ── Category Page Header ─────────────────────────────────────────────── */
+
+.category-header {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-bottom: 10px;
+}
+
+.category-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: #369;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #37A;
+}
+
+.category-page-desc {
+  font-size: 0.9rem;
+  color: #707070;
+}
+
+/* Active category in sidebar */
+.sidebar-category-list li.active-category a {
+  color: #369;
+  font-weight: 700;
+}
+
+.sidebar-category-list li.active-category {
+  background: #f0f6ff;
+  border-radius: 4px;
+  padding-left: 8px;
+  margin-left: -8px;
+}
+
+/* Breadcrumb (shared with post pages, defined here for blog pages) */
+.post-breadcrumb {
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 10px 0;
+  font-size: 0.85rem;
+}
+
+.post-breadcrumb .breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.post-breadcrumb .breadcrumb-item a {
+  color: #37A;
+}
+
+.post-breadcrumb .breadcrumb-item.active {
+  color: #707070;
 }
 
 /* ── Responsive ───────────────────────────────────────────────────────── */
