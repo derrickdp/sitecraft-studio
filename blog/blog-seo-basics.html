@@ -285,20 +285,15 @@
             </script> 
 
             <!-- Recent Posts -->
-            <div class="sidebar-widget mb-4">
-              <h3 class="sidebar-widget-title">Recent Posts</h3>
-              <ul class="sidebar-recent-list">
-                <li>
-                  <a href="blog-seo-basics.html">5 SEO Basics Every Small Business Website Needs in 2026</a>
-                  <span class="small text-muted d-block">May 15, 2026</span>
-                </li>
-                <li>
-                  <a href="blog-website-costs.html">How Much Does a Small Business Website Cost in 2026?</a>
-                  <span class="small text-muted d-block">April 28, 2026</span>
-                </li>
+            <div id="recent-posts-placeholder"></div>
 
-              </ul>
-            </div>
+            <script>
+              fetch('recent-posts.html')
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById('recent-posts-placeholder').innerHTML = data;
+                });
+            </script> 
 
           </aside>
 
