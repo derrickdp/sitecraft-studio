@@ -171,26 +171,14 @@
           <aside class="col-lg-4 blog-sidebar">
 
             <!-- All Categories -->
-            <div class="sidebar-widget mb-4">
-              <h3 class="sidebar-widget-title">Browse Categories</h3>
-              <ul class="sidebar-category-list">
-                <li class="active-category">
-                  <a href="blog-category-seo.html"><i class="fas fa-search mr-2 tm-text-primary"></i>SEO <span class="badge badge-light ml-1">1</span></a>
-                </li>
-                <li>
-                  <a href="blog-category-web-design.html"><i class="fas fa-paint-brush mr-2 tm-text-primary"></i>Web Design <span class="badge badge-light ml-1">0</span></a>
-                </li>
-                <li>
-                  <a href="blog-category-strategy.html"><i class="fas fa-chess mr-2 tm-text-primary"></i>Strategy <span class="badge badge-light ml-1">1</span></a>
-                </li>
-                <li>
-                  <a href="blog-category-small-business.html"><i class="fas fa-store mr-2 tm-text-primary"></i>Small Business <span class="badge badge-light ml-1">1</span></a>
-                </li>
-              </ul>
-              <div class="mt-3">
-                <a href="https://sitecraft-studio.com/blog" class="small tm-text-primary"><i class="fas fa-th-list mr-1"></i> View all posts</a>
-              </div>
-            </div>
+            <div id="categories-placeholder"></div>
+            <script>
+              fetch('categories.html')
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById('categories-placeholder').innerHTML = data;
+                });
+            </script> 
 
             <!-- About -->
             <div class="sidebar-widget mb-4">
