@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Do The Right Thing | Empowering People...Not Just Raising Funds</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        sand: '#F4E7D3',
+        cream: '#FBF5EC',
+        terracotta: '#C96A4A',
+        sienna: '#A55233',
+        walnut: '#4A3124',
+        amberwarm: '#D7A75A',
+        clay: '#E8D0BA'
+      },
+      fontFamily: {
+        heading: ['Cormorant Garamond', 'serif'],
+        body: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FBF5EC;
+  color: #4A3124;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    rgba(74,49,36,0.55),
+    rgba(74,49,36,0.55)
+  );
+}
+
+.service-overlay {
+  background: linear-gradient(
+    rgba(74,49,36,0.45),
+    rgba(74,49,36,0.7)
+  );
+}
+</style>
+</head>
+
+<body class="font-body">
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="#hero" class="font-heading text-3xl font-bold text-walnut">
+      Do The Right Thing
+    </a>
+
+    <div class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#hero" class="hover:text-sienna transition">Home</a>
+      <a href="#about" class="hover:text-sienna transition">About</a>
+      <a href="#services" class="hover:text-sienna transition">Services</a>
+      <a href="#contact" class="hover:text-sienna transition">Collaborate</a>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================
+     ROW 1 HERO
+========================== -->
+<section id="hero" class="min-h-screen relative flex items-center justify-center">
+
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80');">
+  </div>
+
+  <div class="absolute inset-0 hero-overlay"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white fade-up">
+
+    <h1 class="font-heading text-6xl md:text-8xl font-bold mb-4">
+      Do The Right Thing
+    </h1>
+
+    <p class="text-xl md:text-3xl mb-8 text-sand font-light">
+      Empowering people...not just raising funds
+    </p>
+
+    <p class="max-w-3xl mx-auto text-lg md:text-xl mb-10 text-sand/95 leading-relaxed">
+      Building meaningful relationships, cultivating trust, and creating
+      fundraising strategies that strengthen organizations, campaigns,
+      and communities for lasting impact.
+    </p>
+
+    <a href="#contact"
+       class="inline-block bg-amberwarm hover:bg-[#c99544] text-walnut font-semibold px-8 py-4 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+      Let's Work Together
+    </a>
+
+  </div>
+</section>
+
+<!-- =========================
+     ROW 2 ABOUT
+========================== -->
+<section id="about" class="bg-terracotta py-24">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center fade-up">
+
+      <div>
+        <span class="uppercase tracking-[4px] text-sand text-sm font-semibold">
+          About Me
+        </span>
+
+        <h2 class="font-heading text-5xl md:text-6xl text-white mt-4 mb-6">
+          Relationships Win Campaigns
+        </h2>
+
+        <div class="w-20 h-1 bg-amberwarm mb-8"></div>
+
+        <blockquote class="text-white text-lg leading-relaxed">
+          "As a master fundraiser, I've learned that relationship-building
+          and thoughtful stewardship build trust and make organizations
+          and candidates win. My thoughtful and meticulous way of cultivating
+          constituents ensures that you will reach your fundraising goals,
+          and get the results you want!"
+        </blockquote>
+      </div>
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80"
+          alt="Professional fundraising consultant"
+          class="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     ROW 3 SERVICES
+========================== -->
+<section id="services" class="bg-sand py-24">
+
+  <div class="max-w-7xl mx-auto px-6 fade-up">
+
+    <div class="text-center mb-16">
+      <h2 class="font-heading text-5xl md:text-6xl text-walnut mb-4">
+        What I Offer
+      </h2>
+
+      <p class="max-w-2xl mx-auto text-lg">
+        Thoughtful fundraising solutions rooted in trust,
+        stewardship, and authentic human connection.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+          alt="Strategic Fundraising"
+        />
+
+        <div class="absolute inset-0 service-overlay"></div>
+
+        <div class="absolute inset-0 flex items-end p-8">
+          <h3 class="text-white text-3xl font-heading font-bold">
+            Strategic Fundraising
+          </h3>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
+          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+          alt="Relationship Cultivation"
+        />
+
+        <div class="absolute inset-0 service-overlay"></div>
+
+        <div class="absolute inset-0 flex items-end p-8">
+          <h3 class="text-white text-3xl font-heading font-bold">
+            Relationship Cultivation
+          </h3>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
+        <img
+          src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+          alt="Campaign Stewardship"
+        />
+
+        <div class="absolute inset-0 service-overlay"></div>
+
+        <div class="absolute inset-0 flex items-end p-8">
+          <h3 class="text-white text-3xl font-heading font-bold">
+            Campaign Stewardship
+          </h3>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     ROW 4 CONTACT
+========================== -->
+<section id="contact" class="bg-walnut text-sand py-24">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-16 fade-up">
+      <h2 class="font-heading text-5xl md:text-6xl mb-6">
+        Let's Collaborate
+      </h2>
+
+      <p class="text-xl max-w-3xl mx-auto">
+        Ready to build something meaningful? Reach out and let's
+        create a fundraising strategy centered on trust, stewardship,
+        and lasting impact.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 fade-up">
+
+      <!-- FORM -->
+      <div class="bg-[#5A3B2B] rounded-3xl p-8 shadow-2xl">
+
+        <form id="contactForm" class="space-y-5">
+
+          <input
+            type="text"
+            placeholder="Name"
+            required
+            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"
+          >
+
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"
+          >
+
+          <input
+            type="tel"
+            placeholder="Phone"
+            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"
+          >
+
+          <textarea
+            rows="6"
+            placeholder="Message"
+            required
+            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"></textarea>
+
+          <button
+            type="submit"
+            class="w-full bg-amberwarm text-walnut font-semibold py-4 rounded-xl hover:scale-[1.02] transition">
+            Send Message
+          </button>
+
+          <div id="formMessage" class="hidden text-center font-medium pt-3"></div>
+
+        </form>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="flex flex-col justify-center">
+
+        <h3 class="font-heading text-4xl mb-6">
+          Connect With Me
+        </h3>
+
+        <p class="mb-8 text-lg leading-relaxed">
+          Great fundraising begins with meaningful conversation.
+          Whether you're launching a campaign, strengthening donor
+          relationships, or building a long-term development strategy,
+          I'd love to hear from you.
+        </p>
+
+        <div class="space-y-4 text-lg">
+          <p>📧 hello@dotherightthingfundraising.com</p>
+          <p>📞 (555) 123-4567</p>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="flex gap-5 mt-10">
+
+          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
+            <span class="text-xl">📘</span>
+          </a>
+
+          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
+            <span class="text-xl">📸</span>
+          </a>
+
+          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
+            <span class="text-xl">💼</span>
+          </a>
+
+          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
+            <span class="text-xl">✕</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================== -->
+<footer class="bg-[#3E281D] text-sand py-8 text-center">
+  <p>
+    © 2026 Do The Right Thing. All Rights Reserved.
+  </p>
+</footer>
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+<script>
+
+// Fade In Animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+document.querySelectorAll('.fade-up').forEach(el => {
+  observer.observe(el);
+});
+
+// Contact Form Demo Behavior
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const msg = document.getElementById('formMessage');
+
+  msg.classList.remove('hidden');
+  msg.innerHTML = "Thank you for reaching out. I'll be in touch soon.";
+
+  this.reset();
+});
+
+// Hero Animation on Load
+window.addEventListener('load', () => {
+  document.querySelector('.fade-up')?.classList.add('show');
+});
+
+</script>
+
+</body>
+</html>
