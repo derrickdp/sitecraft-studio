@@ -1,443 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Do The Right Thing | Empowering People...Not Just Raising Funds</title>
+  <head>
+    <meta charset="UTF-8" />
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SiteCraft Studio | Custom Web Design for Small Businesses | Chicago</title>
+    <meta name="description" content="Get enterprise-grade web design without enterprise prices. SiteCraft Studio builds custom websites for Chicago-area small businesses, nonprofits, and entrepreneurs. Free consultation. From $500."/>
+    <meta name="googlebot-news" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+    <meta property="og:title" content="SiteCraft Studio | Custom Web Design for Small Businesses" />
+    <meta property="og:url" content="https://sitecraft-studio.com/"/>
+    <meta property="og:description" content=Get enterprise-grade web design without enterprise prices. SiteCraft Studio builds custom websites for Chicago-area small businesses, nonprofits, and entrepreneurs. Free consultation. From $500."/>
+    <meta property="og:image" content="https://www.sitecraft-studio.com/img/sm-preview.jpg"/>
+    <meta name="author" content="Derrick D Patton" />
+    <meta name="founder" content="Derrick D Patton" />
+    <meta name="keywords" content="website build, online presence, custom website"/>
+    
+    
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css"/>
+    <link rel="stylesheet" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico"/>
+    <link rel="canonical" href="https://sitecraft-studio.com/">
 
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="SiteCraft Studio | Custom Web Design"/>
+    <meta name="twitter:description" content="Enterprise-quality websites for small businesses. Chicago, IL."/>
+    <meta name="twitter:image" content="https://sitecraft-studio.com/img/sm-preview.jpg"/>
 
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        sand: '#EDE7E3',
-        cream: '#FBF5EC',
-        terracotta: '#C96A4A',
-        sienna: '#A55233',
-        walnut: '#4A3124',
-		collab : '#F6bA14',
-		darkblue : '#37356B',
-		about : '#5FA0A5',
-        amberwarm: '#D7A75A',
-		cjc : '#893533',
-        clay: '#E8D0BA'
-      },
-      fontFamily: {
-        heading: ['Cormorant Garamond', 'serif'],
-        body: ['Inter', 'sans-serif']
-      }
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SiteCraft Studio",
+        "url": "https://sitecraft-studio.com",
+        "logo": "https://sitecraft-studio.com/img/sm-preview.jpg",
+        "description": "Custom web design and development for small businesses and entrepreneurs.",
+        "founder": { "@type": "Person", "name": "Derrick D Patton" },
+        "areaServed": "Chicago, IL",
+        "telephone": "+13126852933",
+        "priceRange": "$$",
+        "sameAs": ["https://www.facebook.com/SiteCStudio",
+                   "https://linkedin.com/in/derrickdp"]
     }
-  }
-}
-</script>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #FBF5EC;
-  color: #4A3124;
-}
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-overlay {
-  background: linear-gradient(
-    rgba(74,49,36,0.55),
-    rgba(74,49,36,0.55)
-  );
-}
-
-.service-overlay {
-  background: linear-gradient(
-    rgba(74,49,36,0.45),
-    rgba(74,49,36,0.7)
-  );
-}
-</style>
-</head>
-
-<body class="font-body">
-
-<!-- =========================
-     NAVIGATION
-========================== -->
-<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur shadow-md">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <a href="#hero" class="font-heading text-3xl font-bold text-walnut">
-      Do The Right Thing
-    </a>
-
-    <div class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="#hero" class="hover:text-sienna transition">Home</a>
-      <a href="#about" class="hover:text-sienna transition">About</a>
-      <a href="#services" class="hover:text-sienna transition">Services</a>
-      <a href="#contact" class="hover:text-sienna transition">Collaborate</a>
-    </div>
-  </div>
-</nav>
-
-<!-- =========================
-     ROW 1 HERO
-========================== -->
-<section id="hero" class="bg-sand min-h-screen relative flex items-center justify-center">
-<!--
-  <div
-    class="absolute inset-0 bg-cover bg-center"
-    style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80');">
-  </div>
-
-  <div class="absolute inset-0 hero-overlay"></div>
--->
-  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 fade-up flex flex-col min-h-screen pt-28 pb-16">
-
-    <!-- Top two-column row -->
-    <div class="flex flex-col md:flex-row items-center justify-between gap-10 flex-1">
-
-      <!-- LEFT: logo image + name + title -->
-      <div class="flex flex-col items-center md:items-start text-center md:text-left gap-4">
-        <img src="04cb8b832ab9b99f9448e8320c3cdc01.png" class="max-w-[280px] w-full" />
-        <p class="text-2xl md:text-3xl text-about font-light font-heading">
-          Ashley Howard MPA, CFRE
-        </p>
-        <p class="text-lg md:text-xl text-about/90">
-          Owner and Principal Consultant
-        </p>
-      </div>
-
-      <!-- RIGHT: second image -->
-      <div class="flex justify-center md:justify-end">
-        <img src="7c037f53e3b4f68d2a8da6e61a94732c.jpg"
-             class="max-w-[420px] w-full rounded-3xl shadow-2xl object-cover" />
-      </div>
-
-    </div>
-
-    <!-- Bottom: CTA centered -->
-    <div class="flex justify-center mt-12">
-      <a href="#contact"
-         class="inline-block bg-amberwarm hover:bg-[#c99544] text-walnut font-semibold px-8 py-4 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
-        Let's Work Together
-      </a>
-    </div>
-
-  </div>
-</section>
-<!-- =========================
-     ROW 2 ABOUT
-========================== -->
-<section id="about" class="bg-about py-24">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <div class="grid lg:grid-cols-2 gap-12 items-center fade-up">
-
-      <div>
-        <span class="uppercase tracking-[4px] text-sand text-sm font-semibold">
-          Empowering people...not just raising funds
-        </span>
-
-        <h2 class="font-heading text-5xl md:text-6xl text-white mt-4 mb-6">
-          Relationships Win Campaigns
-        </h2>
-
-        <div class="w-20 h-1 bg-amberwarm mb-8"></div>
-
-        <blockquote class="text-white text-lg leading-relaxed">
-          "As a master fundraiser, I've learned that relationship-building
-          and thoughtful stewardship build trust and make organizations
-          and candidates win. 
-		</blockquote>
-		<blockquote class="text-white text-lg leading-relaxed">  
-		  My thoughtful and meticulous way of cultivating
-          constituents ensures that you will reach your fundraising goals,
-          and get the results you want!"
-        </blockquote>
-      </div>
-	  <div>
-        <span class="uppercase tracking-[4px] text-sand text-sm font-semibold">
-          About Me
-        </span>
-      <div>
-        <img
-          src="51e0d6d97e9211ff7f2c772cbea978d7.jpg?auto=format&fit=crop&w=1000&q=80"
-          alt="Professional fundraising consultant"
-          class="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
-        />
-      </div>
-	  <div>
-	  <p class="text-white text-lg leading-relaxed">I've worked in the development field for over a decade, with large, established nonprofits and built a devolopment department with a smaller local organization. I learned a lot from them but decided to fly solo by establishing my own consultancy.</p>
-	  <p class="text-white text-lg leading-relaxed">This is my way of bridging the gaps I saw in the industry, and of bringing a distinctive and personalized approach to the science and art of fundraising and campaign management.</p>
-	  </div>
-	  </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================
-     ROW 3 SERVICES
-========================== -->
-<section id="services" class="bg-sand py-24">
-
-  <div class="max-w-7xl mx-auto px-6 fade-up">
-
-    <div class="text-center mb-16">
-      <h2 class="font-heading text-5xl md:text-6xl text-darkblue mb-4">
-        What I Offer
-      </h2>
-
-      <p class="text-darkblue max-w-2xl mx-auto text-lg">
-        Thoughtful fundraising solutions rooted in trust,
-        stewardship, and authentic human connection.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- Card 1 -->
-      <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
-        <img
-          src="6d0c322417203690f9aa48de315128f3.jpg"
-          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
-          alt="Campaign Financial Management"
-        />
-
-        <div class="absolute inset-0 service-overlay"></div>
-
-		<div class="absolute inset-0 flex flex-col justify-end p-8">
-		  <h3 class="text-white text-3xl font-heading font-bold mb-3">
-			Campaign Financial Management
-		  </h3>
-		  <p class="text-white">
-			Let me lead your team and help you bring change to your constituency.
-			Fundraising strategy is my gift.
-		  </p>
-		</div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
-        <img
-          src="4f70189d2ce5b956b9eb20fde39665dd.jpg?auto=format&fit=crop&w=1200&q=80"
-          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
-          alt="Strategic Consultation"
-        />
-
-        <div class="absolute inset-0 service-overlay"></div>
-
-		<div class="absolute inset-0 flex flex-col justify-end p-8">
-		  <h3 class="text-white text-3xl font-heading font-bold mb-3">
-			Strategic Consultation
-		  </h3>
-		  <p class="text-white">
-			I will point your organization in the right direction, by incorporating
-			best practice fundraising and unique stewardship techniques.
-		  </p>
-		</div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
-        <img
-          src="5e46468a315d86f007eb3984ce055122.jpg?auto=format&fit=crop&w=1200&q=80"
-          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
-          alt="Events"
-        />
-
-        <div class="absolute inset-0 service-overlay"></div>
-
-		<div class="absolute inset-0 flex flex-col justify-end p-8">
-		  <h3 class="text-white text-3xl font-heading font-bold mb-3">
-			Events
-		  </h3>
-		  <p class="text-white">
-			Watch me thoughtfully plan and execute an effective fundraising event.
-		  </p>
-		</div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =========================
-     ROW 4 CONTACT
-========================== -->
-<section id="contact" class="bg-collab text-sand py-24">
-
-  <div class="max-w-7xl mx-auto px-6">
-
-    <div class="text-center mb-16 fade-up">
-      <h2 class="text-darkblue font-heading text-5xl md:text-6xl mb-6">
-        Let's Collaborate
-      </h2>
-
-      <p class="text-darkblue text-xl max-w-3xl mx-auto">
-        Ready to build something meaningful? Reach out and let's
-        create a fundraising strategy centered on trust, stewardship,
-        and lasting impact.
-      </p>
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-12 fade-up">
-
-      <!-- FORM -->
-      <div class="bg-cjc rounded-3xl p-8 shadow-2xl">
-
-        <form id="contactForm" class="space-y-5">
-
-          <input
-            type="text"
-            placeholder="Name"
-            required
-            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"
-          >
-
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"
-          >
-
-          <input
-            type="tel"
-            placeholder="Phone"
-            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"
-          >
-
-          <textarea
-            rows="6"
-            placeholder="Message"
-            required
-            class="w-full p-4 rounded-xl bg-sand text-walnut focus:outline-none focus:ring-2 focus:ring-amberwarm"></textarea>
-
-          <button
-            type="submit"
-            class="w-full bg-about text-sand font-semibold py-4 rounded-xl hover:scale-[1.02] transition">
-            Send Message
+    </script>  
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+              <a href="#infinite" class="navbar-brand">
+                <img src="img\SCS-Logo-3.png" alt="SiteCraft Studio Logo" style="height:50px; ">
+                SiteCraft Studio</a>
+          </div>             
+            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
           </button>
-
-          <div id="formMessage" class="hidden text-center font-medium pt-3"></div>
-
-        </form>
-      </div>
-
-      <!-- CONTACT INFO -->
-      <div class="flex flex-col justify-center">
-
-        <h3 class="text-darkblue font-heading text-4xl mb-6">
-          Connect With Me
-        </h3>
-
-        <p class="text-darkblue mb-8 text-lg leading-relaxed">
-          Great fundraising begins with meaningful conversation.
-          Whether you're launching a campaign, strengthening donor
-          relationships, or building a long-term development strategy,
-          I'd love to hear from you.
-        </p>
-
-        <div class="text-darkblue space-y-4 text-lg">
-          <p>📧 Ashley@dotherightthing.llc</p>
-          <p>📞 (‪(630) 286-9753‬</p>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#infinite">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#whatwedo">What We Do</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#testimonials">Services</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#gallery">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com/blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#contact">Contact</a>
+              </li>                    
+            </ul>
+          </div>        
         </div>
+      </nav>
+      
 
-        <!-- Social Icons -->
-        <div class="flex gap-5 mt-10">
-
-          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
-            <span class="text-xl">📘</span>
-          </a>
-
-          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
-            <span class="text-xl">📸</span>
-          </a>
-
-          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
-            <span class="text-xl">💼</span>
-          </a>
-
-          <a href="#" class="bg-terracotta p-4 rounded-full hover:scale-110 transition">
-            <span class="text-xl">✕</span>
-          </a>
-
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">Custom Websites for Small Businesses & Entrepreneurs</h2>
+            <p class="tm-hero-subtitle">
+              Custom websites that help Chicago small businesses and entrepreneurs grow online.<br/>
+            </p>
+              <!-- CTA Button -->
+            <div class="tm-hero-cta text-center">
+              <a href="#contact" class="btn tm-btn-primary tm-hero-cta-btn">Book a Consultation</a>
+           </div>
         </div>
 
       </div>
+    
+      <div class="tm-next tm-intro-next">
+        <a href="#whatwedo" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
 
-    </div>
+    <section id="whatwedo" class="tm-section-pad-top">
+      
+      <div class="container">
 
-  </div>
-</section>
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4 tm-section-title">What We Do</h2>
+<p class="mb-4 tm-intro-text">
+I’m <a href="https://linkedin.com/in/derrickdp" target="#">Derrick D. Patton</a>, a software development engineer and manager with over 26 years of experience designing, building, and leading software solutions for organizations of all sizes. After decades in enterprise technology, I founded SiteCraft Studio to bring the same reliability, structure, and technical excellence to small businesses, nonprofits, and independent professionals—serving small businesses in Chicago and the greater Chicagoland area.
+</p>
+<p class="mb-4 tm-intro-text">  
+Throughout my career, I’ve led engineering teams, delivered complex systems, and developed a deep understanding of what makes technology both stable and user-friendly. Today, my mission is to help entrepreneurs and organizations build modern, professional websites without the cost or complexity typically associated with enterprise-level solutions.
+</p>
+<p class="mb-4 tm-intro-text">  
+When you work with SiteCraft Studio, you’re partnering with someone who understands code, design, and business strategy. I take pride in getting every detail right so your website doesn’t just look great—it performs effectively for your business.
+</p>
+<p class="mb-4 tm-intro-text">  
+If you’re ready to elevate your online presence, let’s connect and create a website that truly reflects your brand.
+</p>
 
-<!-- =========================
-     FOOTER
-========================== -->
-<footer class="bg-[#000000] text-white py-8 text-center">
-  <p>
-    © 2026 Do The Right Thing. All Rights Reserved.
-  </p>
-</footer>
+<h3 class="tm-text-primary mb-4 tm-section-title">Enterprise-level expertise, sized for your business</h3>
+<p class="mb-4 tm-intro-text">I spent two decades building systems for some of the biggest names in finance and media. I’m
+proud of that work, but I got tired of pouring my skills into companies that already had armies
+of engineers. I wanted to bring that same level of reliability and professionalism to small
+businesses, nonprofits, and community organizations that usually get stuck with cookie-cutter
+solutions. That's why I started SiteCraft Studio, so owners like you can have enterprise-level
+technology without paying enterprise prices.</p>
 
-<!-- =========================
-     JAVASCRIPT
-========================== -->
-<script>
+<h4 class="tm-text-primary mb-4 tm-section-title">Why online presence matters</h4>
+<p class="mb-4 tm-intro-text">
+<ul>                     
+<li>Most people now search online before choosing a local business, so if you are not visible, you simply do not get considered.</li>
+<li>A strong online presence lets you reach far beyond your physical location and stay in front of the right audience every day, not just when they walk past your door.</li>
+<li>Consistent, professional visibility across search, social media, and reviews builds trust, loyalty, and long-term brand awareness.</li>
+</ul>
+</p>​
 
-// Fade In Animation
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-}, {
-  threshold: 0.15
-});
+<h4 class="tm-text-primary mb-4 tm-section-title">How your website helps</h4>
+<p class="mb-4 tm-intro-text">
+  <ul>
+  <li>Your website acts like a 24/7 salesperson that answers questions, builds trust, and can even take orders while you sleep.</li>
+  <li>A well-designed site boosts credibility; research shows most consumers judge a company’s trustworthiness by its website design alone.</li>
+  <li>With the right content and SEO, your site helps you get found on Google when people search for the products or services you offer, driving more qualified leads to your business.</li>
+  </ul>
+</p>
+                      
+<h4 class="tm-text-primary mb-4 tm-section-title">Not a Business? Not a Problem.</h4>
+<h5>Whether you’re:</h5>                      
+<p class="mb-4 tm-intro-text">
+  <ul>
+     <li>Showcasing a personal portfolio or resume</li>
+     <li>Sharing a passion project, blog, or community idea</li>
+     <li>Promoting your art, music, or photography</li>
+     <li>Publishing a class project, thesis, or research</li>
+     <li>Creating a simple site for a family event, club, or cause</li>
+  </ul>
+  We’ll meet you where you are and guide you through every step.
+</p>                      
+                    </div>
+                </div>
 
-document.querySelectorAll('.fade-up').forEach(el => {
-  observer.observe(el);
-});
 
-// Contact Form Demo Behavior
-document.getElementById('contactForm').addEventListener('submit', function(e){
-  e.preventDefault();
+        </div>
+      
+    </section>
+    
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">      
+      <div class="container tm-testimonials-content">
+        <div class="row">
+          <div class="col-lg-12 tm-content-box">
+            <h2 class="text-white text-center mb-4 tm-section-title">Web and Tech Solutions for Business Owners</h2>
 
-  const msg = document.getElementById('formMessage');
+            <div class="mx-auto tm-gallery-container tm-gallery-container-2">
+              <div class="tm-testimonials-carousel">
+                  <figure class="tm-testimonial-item">
+                      <blockquote><b>Urgent fixes: $75-$150 per hour</b></blockquote>
+                      <ul class="mx-auto tm-section-desc">
+                        <li>Fix broken links</li>
+                        <li>Fill in “coming soon” or empty pages</li>
+                        <li>Update or adjust pricing</li>
+                        <li>Remove services or products you no longer offer</li>
+                        <li>Swapping out outdated photos or graphics</li>
+                        <li>Updating business hours, contact info, and staff details</li>
+                        <li>Adding or updating promo banners and announcements</li>
+                        <li>Cleaning up formatting issues (spacing, fonts, alignment)</li>
+                        <li>Fixing mobile display problems on key pages</li>
+                        <li>Updating FAQs and policy pages (shipping, returns, terms)</li>
+                        <li>Adding or adjusting calls-to-action and buttons</li>
+                        <li>Rewriting or tightening key headlines for clarity</li>  
+                      </ul> 
+                      <p class="mx-auto tm-section-desc"><i>If you know your site is causing reptational harm or investor doubt, this is your package, fix it NOW!</i></p>                   
+                  </figure>
+  
+                
+                <figure class="tm-testimonial-item">
+                  
+                  <blockquote><b>Site Rescue Package – $1,000 to $1,500</b></blockquote>
+                  <ul class="mx-auto tm-section-desc">
+                    <li>Full audit of the existing website</li>
+                    <li>Fix or replace broken features (forms, images, navigation)</li>
+                    <li>Security updates and SSL installation</li>
+                    <li>Cleanup of outdated plugins and code</li>
+                    <li>Performance and speed improvements</li>
+                    <li>One round of design tweaks to modernize the look</li>
+                  </ul>
+                  <p class="mx-auto tm-section-desc"><i>This is for businesses with a site that technically exists but is frustrating customers and owners.</i></p>
+                </figure>
 
-  msg.classList.remove('hidden');
-  msg.innerHTML = "Thank you for reaching out. I'll be in touch soon.";
+                <figure class="tm-testimonial-item">
+                  <blockquote><b>Starter Website – <strike>$1,500</strike> $500</b></blockquote>
+                  <ul class="mx-auto tm-section-desc">
+                    <li>Custom, mobile-friendly website (up to 10 pages)</li>
+                    <li>Basic SEO setup</li>
+                    <li>SSL security and domain registration</li>
+                    <li>Testing and launch included</li>
+                  </ul>
+                  <p class="mx-auto tm-section-desc"><i>Perfect for businesses ready to move beyond DIY sites</i></p>
+                </figure>
 
-  this.reset();
-});
+                <figure class="tm-testimonial-item">
+                  <blockquote><b>Growth Package – $3,000 and up</b></blockquote>
+                  <ul class="mx-auto tm-section-desc">
+                    <li>Everything in Starter Website</li>
+                    <li>E-commerce, booking, or client portal integration</li>
+                    <li>Advanced SEO and analytics</li>
+                    <li>Automated forms, CRM, or email list setup</li>
+                  </ul>
+                  <p class="mx-auto tm-section-desc"><i>Ideal for growing firms, clinics, or nonprofits that need digital tools to scale</i></p>
+                </figure>
 
-// Hero Animation on Load
-window.addEventListener('load', () => {
-  document.querySelector('.fade-up')?.classList.add('show');
-});
+                <figure class="tm-testimonial-item">
+                  <blockquote><b>Ongoing Tech Partner – $700 to $1,500 per month</b></blockquote>
+                  <ul class="mx-auto tm-section-desc">
+                    <li>Monthly updates, content changes, and performance monitoring</li>
+                    <li>Security patches and backups</li>
+                    <li>On-call support and troubleshooting</li>
+                    <li>Strategic advice on digital growth</li>
+                  </ul>
+                  <p class="mx-auto tm-section-desc"><i>Your fractional CTO: enterprise-level guidance without the full-time hire</i></p>
+                </figure>
 
-</script>
+              </div>
+            </div>
+          </div>
+        </div>
+<p class="mx-auto tm-section-desc">Every business is unique, and so is every website—there is no true “one-size-fits-all” solution. Your goals, industry, content, and budget all shape what your site really needs.</p>
+<p class="mx-auto tm-section-desc">Package prices are just starting points, not limits. Instead of letting them scare you away, come talk to us about your vision so we can understand your requirements and priorities. Together, we can build a custom package that fits your needs—and your budget—perfectly.</p>
+<p class="mx-auto tm-section-desc">At SiteCraft Studio, we’ll work with you to develop a custom website package that fits your needs—and your budget—perfectly.</p>
+      </div>
+      <div class="tm-bg-overlay">
 
-</body>
+      </div>
+    </section>
+    
+    <section id="gallery" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Gallery</h2>
+              <p class="mx-auto tm-section-desc">
+                This gallery showcases the variety of websites SiteCraft Studio has built and supports, spanning multiple industries and formats.
+              </p>
+          </div>            
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+                      <a href="img/site1.png">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/site1-tn.png" alt="Image 1" class="img-fluid">
+                          <figcaption>
+                            <h2><p><i>Author Writer Publisher</i></p></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/site2.png">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/site2-tn.png" alt="Image 2" class="img-fluid">
+                          <figcaption>
+                            <h2><p><i>Junk Removal Restoration Cleanup</i></p></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/site3.png">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/site3-tn.png" alt="Image 3" class="img-fluid">
+                          <figcaption>
+                            <h2><p><i>Recruiting Job-Placement Career Counceling</i></p></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/site4.png">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/site4-tn.png" alt="Image 4" class="img-fluid">
+                          <figcaption>
+                            <h2><p><i>Military Support Counseling</i></p></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                </div>                
+            </div>        
+          </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+    
+      <div class="container tm-container-contact">
+        
+        <div class="row">
+            
+            <div class="text-center col-12">
+                <h2 class="tm-section-title mb-4">Contact Us</h2>
+                <p class="mb-5">
+                  If you need a new website or a refresh of your existing site, contact us to schedule a time to discuss your goals.
+                </p><br>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+              <form name="contact" method="POST" data-netlify="true">
+                <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
+                <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
+                <textarea id="message" name="message" rows="8" placeholder="Message" class="tm-input" required></textarea>
+                <button type="submit" class="btn tm-btn-submit">Submit</button>
+              </form>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+
+               
+                <div class="contact-item">
+                  <a rel="nofollow" href="mailto:sitecraft.studio@outlook.com" class="item-link" target="_blank" rel="noopener noreferrer">
+                      <i class="far fa-2x fa-envelope mr-4"></i>
+                    <span class="mb-0">Email us</span>
+                  </a>    
+                  <p>sitecraft.studio@outlook.com</p>
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://www.google.com/maps/place/Chicago,+IL" class="item-link" target="_blank" rel="noopener noreferrer">
+                      <i class="fas fa-2x fa-map-marker-alt mr-4"></i>
+                      <span class="mb-0">Our Location</span>
+                  </a>              
+                </div>
+                
+                <div class="contact-item">
+                  <a rel="nofollow" href="tel:3126852933" class="item-link" target="_blank" rel="noopener noreferrer">
+                      <i class="fas fa-2x fa-phone-square mr-4"></i>
+                      <span class="mb-0">312-685-2933</span>
+                  </a>              
+                </div>
+
+                <div class="contact-item">
+                  <a rel="nofollow" href="https://www.facebook.com/SiteCStudio" class="item-link" target="_blank" rel="noopener noreferrer">
+                      <img src="img/Find-Us-on-Facebook-Sign-02.png" alt="FindUs Facebook Image">
+                  </a>              
+                </div>
+                
+                <div class="contact-item">&nbsp;</div>
+            
+            </div>
+            
+            
+        </div><!-- row ending -->
+        
+      </div>
+
+      	<footer class="text-center small tm-footer">
+          <p class="mb-0">
+          Copyright &copy; 2026 SiteCraft Studio, LLC</p>
+        </footer>
+
+    </section>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>     
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script> 
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600,
+          'filter': ':not([href^="https"])'
+        });        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          var url = $(this).attr('href');
+
+          if ( url.includes("https://sitecraft-studio.com/blog")) {
+            return true;
+          }
+            
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+           $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }                 
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+  </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
