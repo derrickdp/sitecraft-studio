@@ -18,11 +18,14 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        sand: '#F4E7D3',
+        sand: '#EDE7E3',
         cream: '#FBF5EC',
         terracotta: '#C96A4A',
         sienna: '#A55233',
         walnut: '#4A3124',
+		collab : '#F6bA14',
+		darkblue : '#37356B',
+		about : '#5FA0A5',
         amberwarm: '#D7A75A',
         clay: '#E8D0BA'
       },
@@ -95,50 +98,60 @@ body {
 <!-- =========================
      ROW 1 HERO
 ========================== -->
-<section id="hero" class="min-h-screen relative flex items-center justify-center">
-
+<section id="hero" class="bg-sand min-h-screen relative flex items-center justify-center">
+<!--
   <div
     class="absolute inset-0 bg-cover bg-center"
     style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80');">
   </div>
 
   <div class="absolute inset-0 hero-overlay"></div>
+-->
+  <div class="relative z-10 w-full max-w-7xl mx-auto px-6 fade-up flex flex-col min-h-screen pt-28 pb-16">
 
-  <div class="relative z-10 max-w-5xl mx-auto px-6 text-center text-white fade-up">
+    <!-- Top two-column row -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-10 flex-1">
 
-    <h1 class="font-heading text-6xl md:text-8xl font-bold mb-4">
-      Do The Right Thing
-    </h1>
+      <!-- LEFT: logo image + name + title -->
+      <div class="flex flex-col items-center md:items-start text-center md:text-left gap-4">
+        <img src="04cb8b832ab9b99f9448e8320c3cdc01.png" class="max-w-[280px] w-full" />
+        <p class="text-2xl md:text-3xl text-about font-light font-heading">
+          Ashley Howard MPA, CFRE
+        </p>
+        <p class="text-lg md:text-xl text-about/90">
+          Owner and Principal Consultant
+        </p>
+      </div>
 
-    <p class="text-xl md:text-3xl mb-8 text-sand font-light">
-      Empowering people...not just raising funds
-    </p>
+      <!-- RIGHT: second image -->
+      <div class="flex justify-center md:justify-end">
+        <img src="7c037f53e3b4f68d2a8da6e61a94732c.jpg"
+             class="max-w-[420px] w-full rounded-3xl shadow-2xl object-cover" />
+      </div>
 
-    <p class="max-w-3xl mx-auto text-lg md:text-xl mb-10 text-sand/95 leading-relaxed">
-      Building meaningful relationships, cultivating trust, and creating
-      fundraising strategies that strengthen organizations, campaigns,
-      and communities for lasting impact.
-    </p>
+    </div>
 
-    <a href="#contact"
-       class="inline-block bg-amberwarm hover:bg-[#c99544] text-walnut font-semibold px-8 py-4 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
-      Let's Work Together
-    </a>
+    <!-- Bottom: CTA centered -->
+    <div class="flex justify-center mt-12">
+      <a href="#contact"
+         class="inline-block bg-amberwarm hover:bg-[#c99544] text-walnut font-semibold px-8 py-4 rounded-full shadow-xl transition duration-300 transform hover:scale-105">
+        Let's Work Together
+      </a>
+    </div>
 
   </div>
 </section>
-
 <!-- =========================
      ROW 2 ABOUT
 ========================== -->
-<section id="about" class="bg-terracotta py-24">
+<section id="about" class="bg-about py-24">
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="grid lg:grid-cols-2 gap-12 items-center fade-up">
 
       <div>
         <span class="uppercase tracking-[4px] text-sand text-sm font-semibold">
-          About Me
+          Empowering people...not just raising funds
         </span>
 
         <h2 class="font-heading text-5xl md:text-6xl text-white mt-4 mb-6">
@@ -150,19 +163,30 @@ body {
         <blockquote class="text-white text-lg leading-relaxed">
           "As a master fundraiser, I've learned that relationship-building
           and thoughtful stewardship build trust and make organizations
-          and candidates win. My thoughtful and meticulous way of cultivating
+          and candidates win. 
+		</blockquote>
+		<blockquote class="text-white text-lg leading-relaxed">  
+		  My thoughtful and meticulous way of cultivating
           constituents ensures that you will reach your fundraising goals,
           and get the results you want!"
         </blockquote>
       </div>
-
+	  <div>
+        <span class="uppercase tracking-[4px] text-sand text-sm font-semibold">
+          About Me
+        </span>
       <div>
         <img
-          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1000&q=80"
+          src="51e0d6d97e9211ff7f2c772cbea978d7.jpg?auto=format&fit=crop&w=1000&q=80"
           alt="Professional fundraising consultant"
           class="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
         />
       </div>
+	  <div>
+	  <p class="text-white text-lg leading-relaxed">I've worked in the development field for over a decade, with large, established nonprofits and built a devolopment department with a smaller local organization. I learned a lot from them but decided to fly solo by establishing my own consultancy.</p>
+	  <p class="text-white text-lg leading-relaxed">This is my way of bridging the gaps I saw in the industry, and of bringing a distinctive and personalized approach to the science and art of fundraising and campaign management.</p>
+	  </div>
+	  </div>
 
     </div>
 
@@ -192,52 +216,63 @@ body {
       <!-- Card 1 -->
       <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+          src="6d0c322417203690f9aa48de315128f3.jpg"
           class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
-          alt="Strategic Fundraising"
+          alt="Campaign Financial Management"
         />
 
         <div class="absolute inset-0 service-overlay"></div>
 
-        <div class="absolute inset-0 flex items-end p-8">
-          <h3 class="text-white text-3xl font-heading font-bold">
-            Strategic Fundraising
-          </h3>
-        </div>
+		<div class="absolute inset-0 flex flex-col justify-end p-8">
+		  <h3 class="text-darkblue text-3xl font-heading font-bold mb-3">
+			Campaign Financial Management
+		  </h3>
+		  <p class="text-darkblue">
+			Let me lead your team and help you bring change to your constituency.
+			Fundraising strategy is my gift.
+		  </p>
+		</div>
       </div>
 
       <!-- Card 2 -->
       <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80"
+          src="4f70189d2ce5b956b9eb20fde39665dd.jpg?auto=format&fit=crop&w=1200&q=80"
           class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
-          alt="Relationship Cultivation"
+          alt="Strategic Consultation"
         />
 
         <div class="absolute inset-0 service-overlay"></div>
 
-        <div class="absolute inset-0 flex items-end p-8">
-          <h3 class="text-white text-3xl font-heading font-bold">
-            Relationship Cultivation
-          </h3>
-        </div>
+		<div class="absolute inset-0 flex flex-col justify-end p-8">
+		  <h3 class="text-darkblue text-3xl font-heading font-bold mb-3">
+			Strategic Consultation
+		  </h3>
+		  <p class="text-darkblue">
+			I will point your organization in the right direction, by incorporating
+			best practice fundraising and unique stewardship techniques.
+		  </p>
+		</div>
       </div>
 
       <!-- Card 3 -->
       <div class="group relative overflow-hidden rounded-3xl h-[420px] cursor-pointer shadow-xl">
         <img
-          src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+          src="5e46468a315d86f007eb3984ce055122.jpg?auto=format&fit=crop&w=1200&q=80"
           class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
-          alt="Campaign Stewardship"
+          alt="Events"
         />
 
         <div class="absolute inset-0 service-overlay"></div>
 
-        <div class="absolute inset-0 flex items-end p-8">
-          <h3 class="text-white text-3xl font-heading font-bold">
-            Campaign Stewardship
-          </h3>
-        </div>
+		<div class="absolute inset-0 flex flex-col justify-end p-8">
+		  <h3 class="text-darkblue text-3xl font-heading font-bold mb-3">
+			Events
+		  </h3>
+		  <p class="text-darkblue">
+			Watch me thoughtfully plan and execute an effective fundraising event.
+		  </p>
+		</div>
       </div>
 
     </div>
@@ -248,16 +283,16 @@ body {
 <!-- =========================
      ROW 4 CONTACT
 ========================== -->
-<section id="contact" class="bg-walnut text-sand py-24">
+<section id="contact" class="bg-collab text-sand py-24">
 
   <div class="max-w-7xl mx-auto px-6">
 
     <div class="text-center mb-16 fade-up">
-      <h2 class="font-heading text-5xl md:text-6xl mb-6">
+      <h2 class="text-darkblue font-heading text-5xl md:text-6xl mb-6">
         Let's Collaborate
       </h2>
 
-      <p class="text-xl max-w-3xl mx-auto">
+      <p class="text-darkblue text-xl max-w-3xl mx-auto">
         Ready to build something meaningful? Reach out and let's
         create a fundraising strategy centered on trust, stewardship,
         and lasting impact.
@@ -311,20 +346,20 @@ body {
       <!-- CONTACT INFO -->
       <div class="flex flex-col justify-center">
 
-        <h3 class="font-heading text-4xl mb-6">
+        <h3 class="text-darkblue font-heading text-4xl mb-6">
           Connect With Me
         </h3>
 
-        <p class="mb-8 text-lg leading-relaxed">
+        <p class="text-darkblue mb-8 text-lg leading-relaxed">
           Great fundraising begins with meaningful conversation.
           Whether you're launching a campaign, strengthening donor
           relationships, or building a long-term development strategy,
           I'd love to hear from you.
         </p>
 
-        <div class="space-y-4 text-lg">
-          <p>📧 hello@dotherightthingfundraising.com</p>
-          <p>📞 (555) 123-4567</p>
+        <div class="text-darkblue space-y-4 text-lg">
+          <p>📧 Ashley@dotherightthing.llc</p>
+          <p>📞 (‪(630) 286-9753‬</p>
         </div>
 
         <!-- Social Icons -->
