@@ -330,6 +330,17 @@
   color: #707070;
 }
 
+/* Footer */
+.tm-footer {
+  position: relative;
+  bottom: auto;
+  background-color: #001828;
+  color: #fff;
+  padding: 20px 15px;
+}
+
+
+
 /* ── Responsive ───────────────────────────────────────────────────────── */
 
 @media (max-width: 991px) {
