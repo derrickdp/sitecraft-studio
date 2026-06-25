@@ -1,0 +1,32 @@
+You are an expert web developer assistant helping maintain a static HTML blog. I need you to add a new blog post by completing all of the following steps in sequence. Execute each step completely before moving to the next.
+**Context you need to gather first:**
+- Read the most recent existing post in `/blog/` to determine the current "last post" filename, title, and its navigation link structure
+- Read `/blog/index.html` to understand the post entry format
+- Read `/blog/category.html` to understand the count format
+- Read `/blog/recent-posts.html` to understand the entry format and confirm there are currently 4 entries
+- Ask me for: post title, slug/filename, category, date, and post content — then proceed with all steps below
+---
+**Step 1 — Create the new post file at `/blog/blog-conversion.html`**
+- Mirror the structure of the most recent existing post exactly
+- Set the **next nav link** to point to the most recent existing post (this new post is older in nav order, so "next" goes to the last post)
+- Set the **previous nav link** as empty/placeholder (to be filled when a newer post is created)
+- The title of the blog post is "3 Website Fixes That Get Small Businesses More Calls This Month"
+- The featured image for this post will be /img/blog-post-conversion-img-16x9.png
+- The category for this post will be "Web Design"- The meta keywords will be "website conversion, small business websites, 
+improve website performance, clear website messaging, call to action optimization, website design tips, visual hierarchy, mobile‑first design, client‑focused copywriting, website refinement, conversion rate improvement, small business marketing, SiteCraft Studio"
+- Contents of the post will be provided later
+**Step 2 — Add a post entry to `/blog/index.html`**
+- Insert the new post entry following the same format as existing entries
+- If the number of posts greater than 4, move the last post to /blog/blog-page-2.html
+**Step 3 — Add a post entry to the appropriate category file `/blog/blog-category-web-design.html`**
+- Insert the entry following the same format as existing entries in that file
+**Step 4 — Edit the previous "last post" file**
+- Open the file that was previously the most recent post
+- Update its **previous nav link** to point to the newly created post
+**Step 5 — Edit `/blog/categories.html`**
+- Increment the post count for the relevant category by 1
+**Step 6 — Edit `/blog/recent-posts.html`**
+- Add the new post as the first/most recent entry
+- If there are already 4 entries, remove the oldest (last) entry so the list stays at 4 entries maximum
+---
+After completing all steps, confirm each file that was modified and flag any navigation links or filenames that could not be resolved.
