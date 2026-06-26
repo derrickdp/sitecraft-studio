@@ -255,16 +255,15 @@
               </div>
             </div>
 
-            <!-- Categories -->
-            <div class="sidebar-widget mb-4">
-              <h3 class="sidebar-widget-title">Categories</h3>
-              <ul class="sidebar-category-list">
-                <li><a href="blog-category-seo.html"><i class="fas fa-search mr-2 tm-text-primary"></i>SEO <span class="badge badge-light ml-1">1</span></a></li>
-                <li><a href="blog-category-web-design.html"><i class="fas fa-paint-brush mr-2 tm-text-primary"></i>Web Design <span class="badge badge-light ml-1">1</span></a></li>
-                <li><a href="blog-category-strategy.html"><i class="fas fa-chess mr-2 tm-text-primary"></i>Strategy <span class="badge badge-light ml-1">1</span></a></li>
-                <li><a href="blog-category-small-business.html"><i class="fas fa-store mr-2 tm-text-primary"></i>Small Business <span class="badge badge-light ml-1">1</span></a></li>
-              </ul>
-            </div>
+			<!-- Categories -->
+            <div id="categories-placeholder"></div>
+            <script>
+              fetch('categories.html')
+                .then(response => response.text())
+                .then(data => {
+                  document.getElementById('categories-placeholder').innerHTML = data;
+                });
+            </script>  
 
             <!-- CTA Widget -->
             <div class="sidebar-widget sidebar-cta mb-4">
