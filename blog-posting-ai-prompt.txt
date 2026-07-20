@@ -10,7 +10,7 @@ You are an expert web developer assistant helping maintain a static HTML blog. I
 - Mirror the structure of the most recent existing post exactly
 - Set the **next nav link** to point to the most recent existing post (this new post is older in nav order, so "next" goes to the last post)
 - Set the **previous nav link** as empty/placeholder (to be filled when a newer post is created)
-- The title of the blog post is "3 Website Fixes That Get Small Businesses More Calls This Month"
+- The title of the blog post is "Why Your Website Isn’t Converting (And How to Fix It Without Starting Over)"
 - The featured image for this post will be /img/blog-post-conversion-img-16x9.png
 - The category for this post will be "Web Design"- The meta keywords will be "website conversion, small business websites, 
 improve website performance, clear website messaging, call to action optimization, website design tips, visual hierarchy, mobile‑first design, client‑focused copywriting, website refinement, conversion rate improvement, small business marketing, SiteCraft Studio"
