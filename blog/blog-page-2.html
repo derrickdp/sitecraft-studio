@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="https://sitecraft-studio.com/fontawesome-5.5/css/all.min.css" />
     <link rel="stylesheet" href="https://sitecraft-studio.com/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://sitecraft-studio.com/css/tokens.css" />
     <link rel="stylesheet" href="https://sitecraft-studio.com/css/main.css" />
     <link rel="stylesheet" href="https://sitecraft-studio.com/css/blog.css" />
     <link rel="icon" type="image/x-icon" href="https://sitecraft-studio.com/img/favicon.ico"/>
@@ -39,41 +40,31 @@
     <!-- Hero / Header -->
     <section id="blog-hero" class="text-white tm-font-big">
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
-        <div class="container">
-          <div class="tm-next">
-            <a href="https://sitecraft-studio.com" class="navbar-brand">
-              <img src="https://sitecraft-studio.com/img/SCS-Logo-3.png" alt="SiteCraft Studio Logo" style="height:50px;">
-              SiteCraft Studio
-            </a>
-          </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars navbar-toggler-icon"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#whatwedo">What We Do</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#testimonials">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#gallery">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link tm-nav-link current" href="https://sitecraft-studio.com/blog">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
+      <nav class="tm-navbar" id="tmNav">
+      <div class="container tm-navbar-inner">
+        <a href="https://sitecraft-studio.com" class="tm-navbar-brand">
+          <img src="https://sitecraft-studio.com/img/SCS-Logo-3.png" alt="SiteCraft Studio Logo" class="tm-navbar-logo">
+          SiteCraft Studio
+        </a>
+
+        <button class="tm-navbar-toggle" type="button" id="navToggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="tm-navbar-toggle-bar"></span>
+          <span class="tm-navbar-toggle-bar"></span>
+          <span class="tm-navbar-toggle-bar"></span>
+        </button>
+
+        <div class="tm-navbar-menu" id="navbarSupportedContent">
+          <ul class="tm-nav-list">
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com">Home</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#whatwedo">What We Do</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#pricing">Services</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#gallery">Gallery</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link current" href="https://sitecraft-studio.com/blog">Blog</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#contact">Contact</a></li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
 
       <div class="text-center tm-hero-text-container">
         <div class="tm-hero-text-container-inner">
@@ -198,46 +189,6 @@
     </footer>
 
 
-    <script src="https://sitecraft-studio.com/js/jquery-3.7.1.min.js"></script>
-    <script src="https://sitecraft-studio.com/js/easing.min.js"></script>
-    <script src="https://sitecraft-studio.com/js/bootstrap.min.js"></script>
-    <script>
-      // Navbar scroll effect
-      $(window).scroll(function () {
-        if ($(document).scrollTop() > 120) {
-          $('.tm-navbar').addClass("scroll");
-        } else {
-          $('.tm-navbar').removeClass("scroll");
-        }
-      });
-
-      // Close mobile menu after click
-      $('#tmNav a').on('click', function () {
-        $('.navbar-collapse').removeClass('show');
-      });
-
-      // Parallax on contact section
-      var background_image_parallax_2 = function ($object, multiplier) {
-        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-        multiplier = 1 - multiplier;
-        var $doc = $(document);
-        $object.css({ "background-attachment": "fixed" });
-        $(window).scroll(function () {
-          if ($(window).width() > 768) {
-            var firstTop = $object.offset().top,
-              pos = $(window).scrollTop(),
-              yPos = Math.round((multiplier * (firstTop - pos)) - 186);
-            var bg_css = 'center ' + yPos + 'px';
-            $object.css({ "background-position": bg_css });
-          } else {
-            $object.css({ "background-position": "center" });
-          }
-        });
-      };
-
-      $(function () {
-        background_image_parallax_2($("#contact"), 0.80);
-      });
-    </script>
+    <script src="https://sitecraft-studio.com/js/nav.js" defer></script>
   </body>
 </html>

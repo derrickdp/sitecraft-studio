@@ -1,0 +1,23 @@
+/* SiteCraft Studio — design tokens. Load before main.css/blog.css/blog-post.css. */
+
+:root {
+  /* Color */
+  --color-bg: #FBF7F1;
+  --color-bg-alt: #F3ECE1;
+  --color-text: #2B2622;
+  --color-muted: #6B645C;
+  --color-accent: #B5502C;
+  --color-accent-hover: #9A4224;
+  --color-navy: #1E2A33;
+  --color-white: #FFFFFF;
+  --color-border: #E7DFD3;
+
+  /* Typography */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Layout */
+  --nav-height: 84px;
+  --nav-height-mobile: 64px;
+  --container-max: 1275px;
+}

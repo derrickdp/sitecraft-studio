@@ -1,12 +1,12 @@
 /*
   blog.css — SiteCraft Studio
-  Blog page styles. Requires tooplate-infinite-loop.css to be loaded first.
+  Blog page styles. Requires tokens.css and main.css to be loaded first.
 */
 
 /* ── Hero ─────────────────────────────────────────────────────────────── */
 
 #blog-hero {
-  background-color: #222;
+  background-color: var(--color-navy);
   background-image: url(https://sitecraft-studio.com/img/infinite-loop-01.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,7 +29,7 @@
 /* ── Blog Post Cards ──────────────────────────────────────────────────── */
 
 .blog-post-card {
-  background: #fff;
+  background: var(--color-white);
   border-radius: 6px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   overflow: hidden;
@@ -46,7 +46,7 @@
   position: relative;
   overflow: hidden;
   height: 230px;
-  background: #e9ecef;
+  background: var(--color-border);
 }
 
 .blog-post-img {
@@ -68,7 +68,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e9ecef;
+  background: var(--color-border);
 }
 
 /* Category badge */
@@ -76,8 +76,8 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background: #369;
-  color: #fff;
+  background: var(--color-accent);
+  color: var(--color-white);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -93,12 +93,12 @@
 
 .blog-post-meta {
   font-size: 0.82rem;
-  color: #999;
+  color: var(--color-muted);
   margin-bottom: 12px;
 }
 
 .blog-post-meta i {
-  color: #37A;
+  color: var(--color-accent);
 }
 
 .blog-post-title {
@@ -109,17 +109,17 @@
 }
 
 .blog-post-title a {
-  color: #37A;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
 .blog-post-title a:hover {
-  color: #D40;
+  color: var(--color-accent-hover);
 }
 
 .blog-post-excerpt {
   font-size: 0.95rem;
-  color: #555;
+  color: var(--color-text);
   line-height: 1.75;
   margin-bottom: 20px;
 }
@@ -132,19 +132,19 @@
 /* ── Pagination ───────────────────────────────────────────────────────── */
 
 .blog-pagination .page-link {
-  color: #369;
-  border-color: #dee2e6;
+  color: var(--color-accent);
+  border-color: var(--color-border);
 }
 
 .blog-pagination .page-item.active .page-link {
-  background-color: #369;
-  border-color: #369;
-  color: #fff;
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .blog-pagination .page-link:hover {
-  background-color: #e9ecef;
-  color: #369;
+  background-color: var(--color-border);
+  color: var(--color-accent);
 }
 
 /* ── Sidebar ──────────────────────────────────────────────────────────── */
@@ -154,7 +154,7 @@
 }
 
 .sidebar-widget {
-  background: #fff;
+  background: var(--color-white);
   border-radius: 6px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   padding: 24px 26px;
@@ -163,8 +163,8 @@
 .sidebar-widget-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #37A;
-  border-bottom: 2px solid #e9ecef;
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-border);
   padding-bottom: 10px;
   margin-bottom: 18px;
   text-transform: uppercase;
@@ -177,7 +177,7 @@
   height: 54px;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #369;
+  border: 2px solid var(--color-accent);
   flex-shrink: 0;
 }
 
@@ -189,7 +189,7 @@
 }
 
 .sidebar-category-list li {
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-border);
   padding: 8px 0;
 }
 
@@ -198,30 +198,30 @@
 }
 
 .sidebar-category-list a {
-  color: #555;
+  color: var(--color-text);
   font-size: 0.95rem;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .sidebar-category-list a:hover {
-  color: #37A;
+  color: var(--color-accent);
 }
 
 .sidebar-category-list .badge {
   font-size: 0.75rem;
-  background: #e9ecef;
-  color: #555;
+  background: var(--color-border);
+  color: var(--color-text);
 }
 
 /* CTA widget */
 .sidebar-cta {
-  background: #001828;
-  color: #fff;
+  background: var(--color-navy);
+  color: var(--color-white);
 }
 
 .sidebar-cta .sidebar-widget-title {
-  color: #9CF;
+  color: rgba(255, 255, 255, 0.85);
   border-bottom-color: rgba(255,255,255,0.15);
 }
 
@@ -243,7 +243,7 @@
 }
 
 .sidebar-recent-list li {
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-border);
   padding: 10px 0;
 }
 
@@ -253,20 +253,20 @@
 
 .sidebar-recent-list a {
   font-size: 0.9rem;
-  color: #37A;
+  color: var(--color-accent);
   text-decoration: none;
   line-height: 1.4;
 }
 
 .sidebar-recent-list a:hover {
-  color: #D40;
+  color: var(--color-accent-hover);
 }
 
 /* ── Category Page Header ─────────────────────────────────────────────── */
 
 .category-header {
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   padding: 20px 24px;
   margin-bottom: 10px;
@@ -275,7 +275,7 @@
 .category-icon-wrap {
   width: 52px;
   height: 52px;
-  background: #369;
+  background: var(--color-accent);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -287,22 +287,22 @@
 .category-page-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #37A;
+  color: var(--color-accent);
 }
 
 .category-page-desc {
   font-size: 0.9rem;
-  color: #707070;
+  color: var(--color-muted);
 }
 
 /* Active category in sidebar */
 .sidebar-category-list li.active-category a {
-  color: #369;
+  color: var(--color-accent);
   font-weight: 700;
 }
 
 .sidebar-category-list li.active-category {
-  background: #f0f6ff;
+  background: var(--color-bg-alt);
   border-radius: 4px;
   padding-left: 8px;
   margin-left: -8px;
@@ -310,8 +310,8 @@
 
 /* Breadcrumb (shared with post pages, defined here for blog pages) */
 .post-breadcrumb {
-  background: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
   padding: 10px 0;
   font-size: 0.85rem;
 }
@@ -323,19 +323,19 @@
 }
 
 .post-breadcrumb .breadcrumb-item a {
-  color: #37A;
+  color: var(--color-accent);
 }
 
 .post-breadcrumb .breadcrumb-item.active {
-  color: #707070;
+  color: var(--color-muted);
 }
 
 /* Footer */
 .tm-footer {
   position: relative;
   bottom: auto;
-  background-color: #001828;
-  color: #fff;
+  background-color: var(--color-navy);
+  color: var(--color-white);
   padding: 20px 15px;
 }
 

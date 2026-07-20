@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="https://sitecraft-studio.com/fontawesome-5.5/css/all.min.css" />
     <link rel="stylesheet" href="https://sitecraft-studio.com/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://sitecraft-studio.com/css/tokens.css" />
     <link rel="stylesheet" href="https://sitecraft-studio.com/css/main.css" />
     <link rel="stylesheet" href="https://sitecraft-studio.com/css/blog.css" />
     <link rel="stylesheet" href="https://sitecraft-studio.com/css/blog-post.css" />
@@ -56,37 +57,27 @@
   <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md tm-navbar scroll" id="tmNav">
-      <div class="container">
-        <div class="tm-next">
-          <a href="https://sitecraft-studio.com/" class="navbar-brand">
-            <img src="https://sitecraft-studio.com/img/SCS-Logo-3.png" alt="SiteCraft Studio Logo" style="height:50px;">
-            SiteCraft Studio
-          </a>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars navbar-toggler-icon"></i>
+    <nav class="tm-navbar" id="tmNav">
+      <div class="container tm-navbar-inner">
+        <a href="https://sitecraft-studio.com" class="tm-navbar-brand">
+          <img src="https://sitecraft-studio.com/img/SCS-Logo-3.png" alt="SiteCraft Studio Logo" class="tm-navbar-logo">
+          SiteCraft Studio
+        </a>
+
+        <button class="tm-navbar-toggle" type="button" id="navToggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="tm-navbar-toggle-bar"></span>
+          <span class="tm-navbar-toggle-bar"></span>
+          <span class="tm-navbar-toggle-bar"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#whatwedo">What We Do</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#testimonials">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#gallery">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link current" href="https://sitecraft-studio.com/blog">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tm-nav-link" href="https://sitecraft-studio.com#contact">Contact</a>
-            </li>
+
+        <div class="tm-navbar-menu" id="navbarSupportedContent">
+          <ul class="tm-nav-list">
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com">Home</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#whatwedo">What We Do</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#pricing">Services</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#gallery">Gallery</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link current" href="https://sitecraft-studio.com/blog">Blog</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="https://sitecraft-studio.com#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -134,7 +125,10 @@
                 Chicago small businesses do not need another <i>"be everywhere"</i> marketing lecture. They need a practical setup that brings in customers, builds trust, and does not eat up every spare hour. For most local businesses, the answer is not website or social media — it is a simple website that owns the information, plus social media that helps people discover and remember you.
               </p>
 
-              <img src="https://sitecraft-studio.com/img/blog-website-vs-social.jpg" alt="Website vs. Social Media" class="img-fluid mb-4" style="max-width: 100%; height: auto;">
+              <picture>
+                <source srcset="https://sitecraft-studio.com/img/blog-website-vs-social.webp" type="image/webp">
+                <img src="https://sitecraft-studio.com/img/blog-website-vs-social.jpg" alt="Website vs. Social Media" class="img-fluid mb-4" style="max-width: 100%; height: auto;">
+              </picture>
 
               <!-- ── 1 ── -->
               <h2 class="post-heading">The real choice</h2>
@@ -245,7 +239,7 @@
             <div class="sidebar-widget mb-4">
               <h3 class="sidebar-widget-title">About the Author</h3>
               <div class="sidebar-about d-flex align-items-start">
-                <img src="img/SCS-Logo-3.png" alt="Derrick D. Patton" class="sidebar-author-img mr-3" onerror="this.style.display='none';">
+                <img src="https://sitecraft-studio.com/img/SCS-Logo-3.png" alt="Derrick D. Patton" class="sidebar-author-img mr-3" onerror="this.style.display='none';">
                 <div>
                   <strong class="tm-text-primary">Derrick D. Patton</strong>
                   <p class="small mt-1 mb-0">Software engineer &amp; founder of SiteCraft Studio. 26+ years building web solutions for businesses of all sizes in the Chicago area.</p>
@@ -291,42 +285,6 @@
       <p class="mb-0">Copyright &copy; 2026 SiteCraft Studio, LLC</p>
     </footer>
 
-    <script src="https://sitecraft-studio.com/js/jquery-3.7.1.min.js"></script>
-    <script src="https://sitecraft-studio.com/js/easing.min.js"></script>
-    <script src="https://sitecraft-studio.com/js/bootstrap.min.js"></script>
-    <script>
-      $(window).scroll(function () {
-        if ($(document).scrollTop() > 120) {
-          $('.tm-navbar').addClass("scroll");
-        } else {
-          $('.tm-navbar').removeClass("scroll");
-        }
-      });
-
-      $('#tmNav a').on('click', function () {
-        $('.navbar-collapse').removeClass('show');
-      });
-
-      var background_image_parallax_2 = function ($object, multiplier) {
-        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
-        multiplier = 1 - multiplier;
-        var $doc = $(document);
-        $object.css({ "background-attachment": "fixed" });
-        $(window).scroll(function () {
-          if ($(window).width() > 768) {
-            var firstTop = $object.offset().top,
-              pos = $(window).scrollTop(),
-              yPos = Math.round((multiplier * (firstTop - pos)) - 186);
-            $object.css({ "background-position": 'center ' + yPos + 'px' });
-          } else {
-            $object.css({ "background-position": "center" });
-          }
-        });
-      };
-
-      $(function () {
-        background_image_parallax_2($("#contact"), 0.80);
-      });
-    </script>
+    <script src="https://sitecraft-studio.com/js/nav.js" defer></script>
   </body>
 </html>
