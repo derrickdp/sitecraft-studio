@@ -1,1 +1,1 @@
-Website for SiteCraft-Sudio.com
+Website for SiteCraft-Studio.com
