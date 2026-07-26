@@ -48,21 +48,30 @@
   <body>
     <!-- Navigation -->
     <nav class="tm-navbar" id="tmNav">
-      <div class="container">
-        <a class="tm-navbar-brand" href="index.html#infinite">
-          <img src="img/SCS-Logo-3.png" alt="SiteCraft Studio Logo" />
+      <div class="container tm-navbar-inner">
+        <a href="index.html#infinite" class="tm-navbar-brand">
+          <img src="img/SCS-Logo-3.png" alt="SiteCraft Studio Logo" class="tm-navbar-logo">
           SiteCraft Studio
         </a>
-        <ul class="tm-nav-list">
-          <li class="tm-nav-item"><a class="tm-nav-link" href="index.html#infinite">Home</a></li>
-          <li class="tm-nav-item"><a class="tm-nav-link" href="index.html#pricing">All Services</a></li>
-          <li class="tm-nav-item"><a class="tm-nav-link" href="#contact">Get Started</a></li>
-        </ul>
+
+        <button class="tm-navbar-toggle" type="button" id="navToggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="tm-navbar-toggle-bar"></span>
+          <span class="tm-navbar-toggle-bar"></span>
+          <span class="tm-navbar-toggle-bar"></span>
+        </button>
+
+        <div class="tm-navbar-menu" id="navbarSupportedContent">
+          <ul class="tm-nav-list">
+            <li class="tm-nav-item"><a class="tm-nav-link" href="index.html#infinite">Home</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="index.html#pricing">All Services</a></li>
+            <li class="tm-nav-item"><a class="tm-nav-link" href="#contact">Get Started</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
     <!-- Hero -->
-    <div class="tm-hero" id="infinite">
+    <section id="infinite" class="tm-photo-section">
       <div class="container text-center tm-hero-text-container">
         <h1 class="tm-hero-title">Get Found on Google — in About a Week</h1>
         <p class="tm-hero-subtitle">
@@ -70,20 +79,18 @@
         </p>
         <a href="#contact" class="btn tm-hero-cta-btn">Get Started – $250 to $350</a>
       </div>
-    </div>
+    </section>
 
     <!-- What's included -->
     <section id="whatwedo" class="tm-section-pad-top">
       <div class="container">
         <h2 class="tm-text-primary tm-section-title">What's Included</h2>
-        <div class="tm-section-desc mx-auto">
-          <ul>
-            <li>Google Business Profile claim, verification, and full optimization</li>
-            <li>A simple one-page website with your services, photos, hours, and a clear call-to-action</li>
-            <li>Local SEO basics: consistent name/address/phone, key search terms, and directory listings</li>
-            <li>Delivered in about a week — no lengthy build process</li>
-          </ul>
-        </div>
+        <ul class="mx-auto tm-section-desc">
+          <li>Google Business Profile claim, verification, and full optimization</li>
+          <li>A simple one-page website with your services, photos, hours, and a clear call-to-action</li>
+          <li>Local SEO basics: consistent name/address/phone, key search terms, and directory listings</li>
+          <li>Delivered in about a week — no lengthy build process</li>
+        </ul>
 
         <h3 class="tm-text-primary tm-section-title">Who This Is For</h3>
         <p class="mx-auto tm-section-desc">
