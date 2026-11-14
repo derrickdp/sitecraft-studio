@@ -1,5 +1,14 @@
 /* SiteCraft Studio — site stylesheet. Requires tokens.css to be loaded first. */
 
+/* Border-box sizing (Bootstrap used to supply this; blog pages still get it
+   from bootstrap.min.css). Without it, .container = 100% + 30px padding and
+   every section overflows the viewport on mobile. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -720,5 +729,40 @@ section[id] {
 @media (max-width: 991px) {
   .tm-intro-text-container {
     padding-top: 30px;
+  }
+}
+
+/* ── Mobile type & spacing ── */
+
+@media (max-width: 767px) {
+  .tm-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .tm-section-title {
+    font-size: 1.9rem;
+  }
+
+  .tm-section-pad-top {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  #contact {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 479px) {
+  /* Smaller arrows so the pricing card gets more of the screen width */
+  .carousel-wrap {
+    gap: 8px;
+  }
+
+  .carousel-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
   }
 }
